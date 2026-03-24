@@ -1,6 +1,8 @@
 import { useState, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import p2 from '../../assets/clients/Picture2.jpg';
 import p3 from '../../assets/clients/Picture3.png';
@@ -123,23 +125,24 @@ export function ProjectsCarousel() {
           </p>
 
           {/* Responsive Industry Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 sm:gap-8 md:gap-12 items-center justify-items-center mb-24 max-w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-10 md:gap-14 items-center justify-items-center mb-28 max-w-full">
             {clients.map((client, idx) => (
-              <div key={idx} className="flex items-center justify-center min-h-[80px] w-full p-4 md:p-6 bg-card border border-border rounded-2xl hover:border-primary/20 hover:shadow-xl transition-all duration-300 group">
+              <div key={idx} className="flex items-center justify-center min-h-[100px] md:min-h-[140px] w-full p-6 md:p-8 bg-card border border-border rounded-2xl md:rounded-3xl hover:border-primary/20 hover:shadow-2xl transition-all duration-300 group">
                 {client.logo ? (
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-h-12 sm:max-h-14 w-auto object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="max-h-14 sm:max-h-20 md:max-h-24 lg:max-h-28 w-auto object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                 ) : (
-                  <div className="text-xs sm:text-sm font-black text-foreground/50 group-hover:text-primary transition-all duration-500 uppercase tracking-tighter text-center">
+                  <div className="text-sm sm:text-xl md:text-2xl font-black text-foreground/40 group-hover:text-primary transition-all duration-500 uppercase tracking-tighter text-center">
                     {client.name}
                   </div>
                 )}
               </div>
             ))}
           </div>
+
 
         </div>
 
