@@ -32,6 +32,7 @@ import p26 from '../../assets/clients/Picture26.png';
 import p27 from '../../assets/clients/Picture27.jpg';
 import p28 from '../../assets/clients/Picture28.jpg';
 import p29 from '../../assets/clients/Picture29.png';
+import maritimeTerminal from '../../assets/projects/maritime_terminal.png';
 
 const projects = [
   {
@@ -39,7 +40,7 @@ const projects = [
     location: "Mumbai Port Trust",
     category: "Waterproofing",
     description: "Full-scale crystaline waterproofing and protective coatings for high-salinity marine environments.",
-    image: "https://images.unsplash.com/photo-1541975097433-354d6702c0d8?auto=format&fit=crop&q=80"
+    image: maritimeTerminal
   },
   {
     title: "Tech-City Hub",

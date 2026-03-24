@@ -52,7 +52,10 @@ export function ProductDetailPage() {
                 <span>Request Quote</span>
                 <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-primary/20 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3">
+              <button
+                onClick={() => product.tdsUrl && window.open(product.tdsUrl, '_blank')}
+                className="bg-primary/20 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3"
+              >
                 <Download className="w-4 h-4" />
                 <span>Technical Data</span>
               </button>

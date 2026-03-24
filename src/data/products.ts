@@ -13,6 +13,7 @@ export interface ProductDetail {
     value: string;
   }[];
   applications: string[];
+  tdsUrl?: string;
 }
 
 export const productsData: ProductDetail[] = [
@@ -52,6 +53,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '4-6 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Complexes',
@@ -94,6 +96,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '30-45 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Projects',
@@ -136,6 +139,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Elongation', value: 'Up to 200%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'High-rise Buildings',
       'Seismic Zones',
@@ -178,6 +182,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Elongation', value: 'Up to 400%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Roofing Systems',
       'Metal Structures',
@@ -220,6 +225,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Heat Reduction', value: 'Up to 40%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Roofs',
       'Commercial Buildings',
@@ -264,6 +270,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Movement Capability', value: '±25%' },
       { label: 'Temperature Range', value: '-40°C to +80°C' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Building Construction',
       'Infrastructure Projects',
@@ -306,6 +313,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compression', value: 'Up to 50%' },
       { label: 'Temperature Range', value: '-30°C to +70°C' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Pavements',
       'Industrial Flooring',
@@ -348,6 +356,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Maintenance',
@@ -390,6 +399,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Shore A Hardness', value: '25-35' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Commercial Buildings',
       'Infrastructure Projects',
@@ -432,6 +442,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Curing Time', value: '7-14 days' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Airport Infrastructure',
       'Highway Construction',
@@ -474,6 +485,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Tack Free Time', value: '2-4 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Construction',
       'Commercial Buildings',
@@ -518,6 +530,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Application', value: 'Spray/Brush' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Ready Mix Concrete',
       'Precast Industry',
@@ -560,6 +573,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Retention', value: '>90%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Commercial Flooring',
       'Industrial Slabs',
@@ -602,6 +616,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Retention', value: '>95%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Decorative Concrete',
       'Architectural Projects',
@@ -644,6 +659,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Penetration', value: '5-10mm' },
       { label: 'Shelf Life', value: '24 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Flooring',
       'Commercial Projects',
@@ -686,6 +702,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>0.5 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Basement Waterproofing',
       'Tunnel Construction',
@@ -730,6 +747,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>80 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Facilities',
       'Manufacturing Units',
@@ -772,6 +790,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '6 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Light to Medium Traffic Areas',
       'Commercial Flooring',
@@ -814,6 +833,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>80 MPa' },
       { label: 'Shelf Life', value: '6 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Heavy Industrial Floors',
       'Logistics Facilities',
@@ -856,6 +876,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Food Grade', value: 'FDA Approved' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Water Treatment Plants',
       'Food & Beverage Industry',
@@ -898,6 +919,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>60 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Floor Leveling',
       'Industrial Facilities',
@@ -940,6 +962,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '2-4 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Building Facades',
       'Decorative Surfaces',
@@ -984,6 +1007,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>30 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Tiling',
       'Commercial Projects',
@@ -1026,6 +1050,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Absorption', value: '<5%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Hotels and Restaurants',
@@ -1068,6 +1093,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Chemical Resistance', value: 'Excellent' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Food Industry',
       'Pharmaceutical Industry',
@@ -1110,6 +1136,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '30-40 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Bonding',
@@ -1152,6 +1179,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Maintenance',
@@ -1194,6 +1222,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '45-60 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Bridge Construction',
       'Precast Structures',
@@ -1236,6 +1265,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '4-6 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Projects',
@@ -1278,6 +1308,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Bond Strength', value: '>25 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Anchoring',
       'Infrastructure Projects',
@@ -1320,6 +1351,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Fragrance', value: 'Lemon' },
       { label: 'Shelf Life', value: '24 months' }
     ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Cleaning',
       'Commercial Spaces',
