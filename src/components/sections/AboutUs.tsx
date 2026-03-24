@@ -143,7 +143,7 @@ export function AboutUs() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <div className="relative group rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square sm:aspect-video lg:aspect-auto lg:h-[600px] w-full">
               <img
                 src="https://images.unsplash.com/photo-1758876202877-30b2c505ad9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMGJ1c2luZXNzfGVufDF8fHx8MTc2NTc5MjY1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Global Reach"
