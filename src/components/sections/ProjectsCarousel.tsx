@@ -124,24 +124,25 @@ export function ProjectsCarousel() {
             uncompromising construction chemical performance.
           </p>
 
-          {/* Responsive Industry Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-10 md:gap-14 items-center justify-items-center mb-28 max-w-full">
+          {/* Responsive Industry Grid - Clean without borders */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 sm:gap-12 md:gap-16 items-center justify-items-center mb-28 max-w-full">
             {clients.map((client, idx) => (
-              <div key={idx} className="flex items-center justify-center min-h-[100px] md:min-h-[140px] w-full p-6 md:p-8 bg-card border border-border rounded-2xl md:rounded-3xl hover:border-primary/20 hover:shadow-2xl transition-all duration-300 group">
+              <div key={idx} className="flex items-center justify-center min-h-[100px] md:min-h-[120px] w-full focus:outline-none group">
                 {client.logo ? (
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-h-14 sm:max-h-20 md:max-h-24 lg:max-h-28 w-auto object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="max-h-16 sm:max-h-24 md:max-h-28 lg:max-h-32 w-auto object-contain opacity-60 hover:opacity-100 transition-all duration-500 hover:scale-105"
                   />
                 ) : (
-                  <div className="text-sm sm:text-xl md:text-2xl font-black text-foreground/40 group-hover:text-primary transition-all duration-500 uppercase tracking-tighter text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-black text-foreground/10 hover:text-primary transition-all duration-500 uppercase tracking-tighter whitespace-nowrap text-center select-none cursor-default border-b-2 border-transparent hover:border-primary/20 pb-2">
                     {client.name}
                   </div>
                 )}
               </div>
             ))}
           </div>
+
 
 
         </div>
