@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router';
 import { Search, ArrowRight } from 'lucide-react';
+import tilingImage from '../../assets/products/tiling.png';
+import waterproofingImage from '../../assets/products/waterproofing.png';
 
 const categories = [
   {
     id: 'waterproofing',
     title: 'Waterproofing Coatings',
     count: 5,
-    image: 'https://images.unsplash.com/photo-1644329615817-036a646f9348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY29hdGluZyUyMGFwcGxpY2F0aW9uJTIwd2hpdGV8ZW58MXx8fHwxNzczNjYwMTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: waterproofingImage
   },
   {
     id: 'sealants',
@@ -30,7 +32,7 @@ const categories = [
     id: 'tiling',
     title: 'Tiling, Adhesives & Repairing Compounds',
     count: 9,
-    image: 'https://images.unsplash.com/photo-1678743539452-9363f2fe86d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwYWRoZXNpdmUlMjBncm91dCUyMGFwcGxpY2F0aW9ufGVufDF8fHx8MTc3MzY2MDE1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: tilingImage
   }
 ];
 
