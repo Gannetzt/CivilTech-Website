@@ -1,9 +1,7 @@
 import { useState, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 import p2 from '../../assets/clients/Picture2.jpg';
 import p3 from '../../assets/clients/Picture3.png';
 import p4 from '../../assets/clients/Picture4.png';
@@ -111,37 +109,6 @@ export function ProjectsCarousel() {
 
   const goToSlide = (index: number) => setCurrentIndex(index);
 
-  const clientSliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    arrows: false,
-    cssEase: "linear",
-    pauseOnHover: true,
-    variableWidth: true,
-    draggable: true,
-    swipeToSlide: true,
-    touchMove: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2,
-        }
-      }
-    ]
-  };
-
   return (
     <section className="py-24 bg-background transition-colors duration-300 overflow-hidden" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,35 +122,25 @@ export function ProjectsCarousel() {
             uncompromising construction chemical performance.
           </p>
 
-          {/* Balanced Industry Marquee */}
-          <div className="relative mb-24 max-w-full overflow-hidden">
-            <Slider
-              key={`clients-${location.key}`}
-              {...clientSliderSettings}
-              className="client-slider"
-            >
-              {clients.map((client, idx) => (
-                <div key={idx} className="px-12 sm:px-20 focus:outline-none">
-                  <div className="flex items-center justify-center min-h-[100px]">
-                    {client.logo ? (
-                      <img
-                        src={client.logo}
-                        alt={client.name}
-                        className="h-10 sm:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-500"
-                      />
-                    ) : (
-                      <div className="text-xl sm:text-2xl font-black text-foreground/10 hover:text-primary transition-all duration-500 uppercase tracking-tighter whitespace-nowrap py-6 select-none cursor-default border-b-2 border-transparent hover:border-primary/20">
-                        {client.name}
-                      </div>
-                    )}
+          {/* Responsive Industry Grid */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 sm:gap-8 md:gap-12 items-center justify-items-center mb-24 max-w-full">
+            {clients.map((client, idx) => (
+              <div key={idx} className="flex items-center justify-center min-h-[80px] w-full p-4 md:p-6 bg-card border border-border rounded-2xl hover:border-primary/20 hover:shadow-xl transition-all duration-300 group">
+                {client.logo ? (
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-h-12 sm:max-h-14 w-auto object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                ) : (
+                  <div className="text-xs sm:text-sm font-black text-foreground/50 group-hover:text-primary transition-all duration-500 uppercase tracking-tighter text-center">
+                    {client.name}
                   </div>
-                </div>
-              ))}
-            </Slider>
-
-            <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none"></div>
+                )}
+              </div>
+            ))}
           </div>
+
         </div>
 
         <div className="relative group/carousel">
