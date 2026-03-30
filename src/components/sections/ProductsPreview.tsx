@@ -2,36 +2,39 @@ import { useNavigate } from 'react-router';
 import { Search, ArrowRight } from 'lucide-react';
 import tilingImage from '../../assets/products/tiling.png';
 import waterproofingImage from '../../assets/products/waterproofing.png';
+import groutsImage from '../../assets/products/Grouts And Anchors.jpg';
+import protectiveImage from '../../assets/products/Protective Coatings 1.jpg';
+import exteriorImage from '../../assets/products/Exterior Protective Paints.jpg';
 
 const categories = [
   {
     id: 'waterproofing',
     title: 'Waterproofing Coatings',
-    count: 5,
+    count: 7,
     image: waterproofingImage
   },
   {
     id: 'sealants',
     title: 'Expansion Joints / Sealants',
-    count: 6,
-    image: 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    count: 7,
+    image: groutsImage
   },
   {
     id: 'concrete',
     title: 'Concrete Aids',
-    count: 5,
-    image: 'https://images.unsplash.com/photo-1714386548315-4d3b4a1009a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGN1cmluZyUyMGNvbXBvdW5kJTIwc3ByYXl8ZW58MXx8fHwxNzczNjYwMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    count: 6,
+    image: exteriorImage
   },
   {
     id: 'flooring',
     title: 'Protection Compounds / Flooring Products',
     count: 6,
-    image: 'https://images.unsplash.com/photo-1772305595483-6b058aff40f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlcG94eSUyMGZsb29yJTIwY29hdGluZyUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzczNjYwMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: protectiveImage
   },
   {
     id: 'tiling',
     title: 'Tiling, Adhesives & Repairing Compounds',
-    count: 9,
+    count: 10,
     image: tilingImage
   }
 ];

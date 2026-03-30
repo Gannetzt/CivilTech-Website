@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router';
 import { Sun, Moon, Menu, X, ChevronDown, Phone, Clock } from 'lucide-react';
 import logo from 'figma:asset/59663358e291026026b733e05a456c1f287e3e58.png';
+import { GetQuoteWidget } from '../ui/GetQuoteWidget';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,7 +114,7 @@ export function Header() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-1.5 group cursor-default">
                 <Phone className="w-3 h-3 text-green-600 group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors">+91 40 2345 6789</span>
+                <span className="group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors">+91 40-35982016 | +91 89787 85341</span>
               </div>
               <div className="flex items-center gap-1.5 group cursor-default">
                 <Clock className="w-3 h-3 text-green-600 group-hover:scale-110 transition-transform" />
@@ -122,7 +123,7 @@ export function Header() {
             </div>
             <div className="flex items-center gap-1.5 group cursor-default">
               <span className="text-gray-300">Email:</span>
-              <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">info@civiltech.com</span>
+              <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">mailtociviltech@gmail.com</span>
             </div>
           </div>
         </div>
@@ -186,6 +187,8 @@ export function Header() {
 
           {/* Icons */}
           <div className="hidden lg:flex items-center space-x-3">
+            <GetQuoteWidget />
+            <div className="w-px h-6 bg-border mx-1"></div>
             <button 
               onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2 hover:bg-gray-100 dark:hover:bg-blue-900/40 rounded-full transition-all duration-300 transform hover:scale-110"
@@ -253,7 +256,8 @@ export function Header() {
                   )}
                 </div>
               ))}
-              <div className="flex items-center space-x-4 pt-6 mt-4 border-t border-border px-4">
+              <div className="flex flex-col space-y-4 pt-6 mt-4 border-t border-border px-4">
+                <GetQuoteWidget />
                 <button 
                   onClick={() => setIsDarkMode(!isDarkMode)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors flex items-center gap-3 group w-full"

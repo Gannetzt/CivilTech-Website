@@ -24,7 +24,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Acrylic Polymer Waterproofing Compound',
-    image: 'https://images.unsplash.com/photo-1644329615817-036a646f9348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY29hdGluZyUyMGFwcGxpY2F0aW9uJTIwd2hpdGV8ZW58MXx8fHwxNzczNjYwMTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/POLYBOND AP.png',
     features: [
       'Single component acrylic polymer based waterproofing',
       'Excellent adhesion to concrete, masonry, and plaster',
@@ -67,7 +67,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Two Component Polymerized Waterproofing Coating',
-    image: 'https://images.unsplash.com/photo-1768102365754-1ee366d9491a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY29uc3RydWN0aW9uJTIwY29hdGluZyUyMG9yYW5nZXxlbnwxfHx8fDE3NzM2NTg2NDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/POLYBOND 2K.jpg',
     features: [
       'Two component polymer modified waterproofing system',
       'Superior adhesion and flexibility',
@@ -110,7 +110,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Two Component Cementitious Flexible Waterproofing Coating',
-    image: 'https://images.unsplash.com/photo-1701009711077-07f9f4ea0edd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwcHJvZHVjdCUyMGNvbnRhaW5lcnN8ZW58MXx8fHwxNzczNjU3ODYzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/Polybond 2k Ultra.jpg',
     features: [
       'Ultra-flexible cementitious waterproofing coating',
       'Superior crack bridging up to 2mm',
@@ -153,7 +153,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'High Build Elastomeric Waterproofing Coating',
-    image: 'https://images.unsplash.com/photo-1650741567458-4ed31485ed15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY2hlbWljYWwlMjBjb250YWluZXJ8ZW58MXx8fHwxNzczNjU4MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/POLYBOND PU.jpg',
     features: [
       'Single component polyurethane based coating',
       'High build elastomeric membrane',
@@ -196,7 +196,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Single Component Thermal Insulation cum Waterproofing Coating',
-    image: '/src/assets/products/waterproofing.png',
+    image: '/src/assets/products/POLYBOND FLEXICOAT.jpg',
     features: [
       'Dual function: waterproofing and thermal insulation',
       'Reduces heat transfer by up to 40%',
@@ -231,6 +231,92 @@ export const productsData: ProductDetail[] = [
       'Commercial Buildings',
       'Residential Projects',
       'Energy Conservation Projects'
+    ]
+  },
+  {
+    id: 'w6',
+    name: 'InstaPlug -P',
+    category: 'waterproofing',
+    categoryName: 'Waterproofing Coatings',
+    description: 'Rapid Setting Water Plugging Mortar (Powder)',
+    image: '/src/assets/products/INSTAPLUG -P.jpg',
+    features: [
+      'Instant setting water plugging mortar',
+      'Rapidly stops leaking water',
+      'High early strength development',
+      'Excellent bond to concrete',
+      'Can be used underwater'
+    ],
+    usage: [
+      'Stopping active water leakages',
+      'Sealing joints in concrete pipes',
+      'Repairing water retaining structures',
+      'Basement and tunnel repairs',
+      'Underwater repairs'
+    ],
+    advantages: [
+      'Stops water flow in seconds',
+      'Non-shrink properties',
+      'Easy to mix and apply',
+      'Permanent water sealing',
+      'Safe for potable water'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Cementitious specialized compound' },
+      { label: 'Color', value: 'Grey' },
+      { label: 'Setting Time', value: '1-3 minutes' },
+      { label: 'Compressive Strength', value: '>40 MPa' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Basements',
+      'Water Tanks',
+      'Sewage Systems',
+      'Tunnels'
+    ]
+  },
+  {
+    id: 'w7',
+    name: 'InstaPlug -L',
+    category: 'waterproofing',
+    categoryName: 'Waterproofing Coatings',
+    description: 'Liquid Shotcrete Accelerator / Rapid Hardener',
+    image: '/src/assets/products/INSTAPLUG-L.jpg',
+    features: [
+      'Liquid rapid hardening admixture',
+      'Instant set for shotcrete',
+      'High early strength',
+      'Reduces rebound loss',
+      'Non-chloride formulation'
+    ],
+    usage: [
+      'Shotcreting in tunnels',
+      'Slope stabilization',
+      'Rapid repairs',
+      'Cold weather concreting',
+      'Precast concrete production'
+    ],
+    advantages: [
+      'Fast setting and hardening',
+      'Improved bond to substrate',
+      'Economical application',
+      'Minimal shrinkage',
+      'Reliable performance'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Specialized Chemicals' },
+      { label: 'Color', value: 'Amber/Clear' },
+      { label: 'Setting Time', value: 'Instant' },
+      { label: 'Specific Gravity', value: '1.25 ± 0.05' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Tunneling',
+      'Mining',
+      'Slope Protection',
+      'Precast Industry'
     ]
   },
 
@@ -669,7 +755,7 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 'c5',
-    name: 'PU 300',
+    name: 'CCC500',
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'High Performance PU Injection Foam Grout',
@@ -708,6 +794,48 @@ export const productsData: ProductDetail[] = [
       'Tunnel Construction',
       'Underground Structures',
       'Dam Repairs'
+    ]
+  },
+  {
+    id: 'c6',
+    name: 'InstaCrete (Shotcrete Accelerator)',
+    category: 'concrete',
+    categoryName: 'Concrete Aids',
+    description: 'Liquid Shotcrete Accelerator for Sprayed Concrete',
+    image: '/src/assets/products/INSTACRETE (Shotcrete Accelerator).jpg',
+    features: [
+      'High performance liquid accelerator',
+      'Instant set for shotcrete / guniting',
+      'Improved bond to substrate',
+      'Reduces rebound significantly',
+      'Enhances waterproofing properties'
+    ],
+    usage: [
+      'Wet and dry shotcrete',
+      'Tunnel lining and support',
+      'Rock stabilization',
+      'Repair of concrete structures',
+      'Precast concrete'
+    ],
+    advantages: [
+      'Rapid strength gain',
+      'Durable concrete lining',
+      'Economical - reduced waste',
+      'Consistent performance',
+      'Non-alkaline option available'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Liquid Specialized Admixture' },
+      { label: 'Color', value: 'Clear/Amber' },
+      { label: 'Setting Time', value: '1-5 minutes' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Mining Operations',
+      'Subway Tunnels',
+      'Basement Excavations',
+      'Canal Lining'
     ]
   },
 
@@ -761,7 +889,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Non Metallic Wear Resistant Floor Topping',
-    image: 'https://images.unsplash.com/photo-1638976892251-efab1145436a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZXBveHklMjBmbG9vciUyMGJsdWUlMjBjb2F0aW5nfGVufDF8fHx8MTc3MzY1ODY0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/NON METALLIC FLOOR HARDNER.jpg',
     features: [
       'Non-metallic aggregate floor hardener',
       'High abrasion resistance',
@@ -804,7 +932,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Metallic Aggregate Abrasion Resistant Floor Topping',
-    image: 'https://images.unsplash.com/photo-1673297821205-e0575bbc2ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcGFpbnQlMjBidWNrZXQlMjBwcm9kdWN0fGVufDF8fHx8MTc3MzY1ODA1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/METALLIC FLOOR HARDNER.jpg',
     features: [
       'Metallic aggregate floor hardener',
       'Superior abrasion resistance',
@@ -890,7 +1018,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Self Leveling Abrasion Resistant Floor Topping',
-    image: 'https://images.unsplash.com/photo-1650741567458-4ed31485ed15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY2hlbWljYWwlMjBjb250YWluZXJ8ZW58MXx8fHwxNzczNjU4MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/FLOORTOP SL (SELF LEVELLING ABBRASSION RESISTANT FLOOR TOPPING).jpg',
     features: [
       'Self-leveling floor topping',
       'High strength and durability',
@@ -978,7 +1106,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Cement Based Tile Jointing Mortar',
-    image: 'https://images.unsplash.com/photo-1678743539452-9363f2fe86d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwYWRoZXNpdmUlMjBncm91dCUyMGFwcGxpY2F0aW9ufGVufDF8fHx8MTc3MzY2MDE1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/TILE O FIX (Polymeric Cement Based Tile Grout).jpg',
     features: [
       'Polymer modified tile jointing mortar',
       'High bonding strength',
@@ -1021,7 +1149,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Polymeric Cement Based Tile Joint Grout',
-    image: 'https://images.unsplash.com/photo-1673978484089-128ba958e4d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwZ3JvdXQlMjBhbmNob3JzJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MzY1ODY0OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/CEM GROUT (Single component cementitious tile grout).jpg',
     features: [
       'Premium polymer modified grout',
       'Stain and water resistant',
@@ -1060,11 +1188,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 't3',
-    name: 'Grout EP',
+    name: 'TileCrete EP',
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Three Component Epoxy Tile Grout',
-    image: 'https://images.unsplash.com/photo-1708746333853-2c3261852e91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZGhlc2l2ZSUyMGNvbnN0cnVjdGlvbiUyMHByb2R1Y3QlMjB3aGl0ZSUyMGJhZ3xlbnwxfHx8fDE3NzM2NTgwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/TILECRETE EP – (3 COMPONENT EPOXY BASED TILE GROUT).jpg',
     features: [
       'Three component epoxy grout',
       'Chemical and stain resistant',
@@ -1322,7 +1450,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'High Performance Floor Cleaning Agent',
-    image: 'https://images.unsplash.com/photo-1644329615817-036a646f9348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY29hdGluZyUyMGFwcGxpY2F0aW9uJTIwd2hpdGV8ZW58MXx8fHwxNzczNjYwMTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/src/assets/products/TILE ‘O’ Clean (High performance Tile cleaning agent).jpg',
     features: [
       'Specialized tile and grout cleaner',
       'Removes stains and efflorescence',
@@ -1357,6 +1485,125 @@ export const productsData: ProductDetail[] = [
       'Commercial Spaces',
       'Post-Construction',
       'Maintenance Cleaning'
+    ]
+  },
+  {
+    id: 't10',
+    name: 'BlockFix C10 / C20',
+    category: 'tiling',
+    categoryName: 'Tiling, Adhesives & Repairing Compounds',
+    description: 'Thin Joint Masonry Mortar for AAC Blocks',
+    image: '/src/assets/products/BLOCKFIX C20  BLOCKFIX C10.jpg',
+    features: [
+      'High strength thin joint masonry mortar',
+      'Excellent bond with AAC blocks',
+      'Minimal thickness application (3-5mm)',
+      'Water resistant and durable',
+      'Saves time and labor costs'
+    ],
+    usage: [
+      'AAC block masonry',
+      'Hollow block masonry',
+      'Concrete block wall construction',
+      'Thin joint mortar for stones',
+      'Interior and exterior walls'
+    ],
+    advantages: [
+      'Superior bonding strength',
+      'Reduced thermal bridging',
+      'No curing required',
+      'Ready to use - just add water',
+      'Minimal wastage'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Polymer Modified Cement' },
+      { label: 'Color', value: 'Grey' },
+      { label: 'Bond Strength', value: '>0.5 MPa' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Residential High-rises',
+      'Commercial Buildings',
+      'Institutional Projects',
+      'Industrial Units'
+    ]
+  },
+  {
+    id: 't11',
+    name: 'RockfixGP',
+    category: 'tiling',
+    categoryName: 'Tiling, Adhesives & Repairing Compounds',
+    description: 'General Purpose Adhesives and Repairing Compound',
+    image: '/src/assets/products/ROCKFIX GP.jpg',
+    features: [
+      'High performance',
+      'Excellent bonding',
+      'Easy to apply',
+      'Water resistant',
+      'Durable'
+    ],
+    usage: [
+      'Tiling applications',
+      'Repairing works',
+      'Bonding agent'
+    ],
+    advantages: [
+      'Strong adhesion',
+      'Long lasting',
+      'Cost effective'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Cementitious' },
+      { label: 'Color', value: 'Grey' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Residential',
+      'Commercial',
+      'Industrial'
+    ]
+  },
+  {
+    id: 's7',
+    name: 'HardCrete 55',
+    category: 'sealants',
+    categoryName: 'Expansion Joints / Sealants',
+    description: 'High Build Non-Shrink Structural Repair Grout',
+    image: '/src/assets/products/HARDCRETE 55.jpg',
+    features: [
+      'Non-shrink structural repair mortar',
+      'High compressive strength',
+      'Excellent bond to concrete and steel',
+      'High build - can be applied in thickness',
+      'Resistant to carbonation and chlorides'
+    ],
+    usage: [
+      'Structural concrete repairs',
+      'Patching of spalled concrete',
+      'Column and beam Jacketing',
+      'Bridge deck repairs',
+      'Marine structure repairs'
+    ],
+    advantages: [
+      'Durable structural repairs',
+      'Prevents steel corrosion',
+      'Good workability',
+      'Fast strength development',
+      'Permanent solution'
+    ],
+    specifications: [
+      { label: 'Base', value: 'Specialized Cementitious Compound' },
+      { label: 'Color', value: 'Grey' },
+      { label: 'Compressive Strength', value: '>55 MPa' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    applications: [
+      'Bridges and Dams',
+      'Industrial Structures',
+      'Infrastructure Repairs',
+      'General Construction'
     ]
   }
 ];

@@ -18,9 +18,9 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen w-full overflow-x-hidden selection:bg-green-100 selection:text-green-900 bg-background text-foreground transition-colors duration-300">
+      <div className="min-h-screen w-full overflow-clip selection:bg-green-100 selection:text-green-900 bg-background text-foreground transition-colors duration-300">
         <Header />
-        <main className="w-full overflow-x-hidden">
+        <main className="w-full overflow-clip">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/solutions" element={<SolutionsPage />} />

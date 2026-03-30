@@ -174,7 +174,7 @@ export function AboutUs() {
                   </div>
                   <div>
                     <p className="text-white font-black text-sm uppercase tracking-widest mb-1">Call Us</p>
-                    <p className="text-white text-lg font-black">+91 40 2345 6789</p>
+                    <p className="text-white text-lg font-black">+91 40-35982016 | +91 89787 85341</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">
@@ -183,7 +183,7 @@ export function AboutUs() {
                   </div>
                   <div>
                     <p className="text-white font-black text-sm uppercase tracking-widest mb-1">Email Us</p>
-                    <p className="text-white text-lg font-black">india@civiltech.com</p>
+                    <p className="text-white text-lg font-black">mailtociviltech@gmail.com</p>
                   </div>
                 </div>
               </div>

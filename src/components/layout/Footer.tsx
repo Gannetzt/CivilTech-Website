@@ -88,11 +88,11 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-green-500" /> 
-                <span>+91 40 2345 6789</span>
+                <span>+91 40-35982016 / +91 89787 85341</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-green-500" /> 
-                <span>info@civiltech.com</span>
+                <span>mailtociviltech@gmail.com</span>
               </p>
             </div>
           </div>
