@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Search, ArrowRight, Building2, Map } from 'lucide-react';
 
 const states = [
@@ -24,11 +24,9 @@ export function ContactUs() {
     name: '',
     email: '',
     phone: '',
-    address: '',
     organisation: '',
-    country: 'India',
-    message: '',
-    subject: ''
+    subject: '',
+    message: ''
   });
 
   const [selectedState, setSelectedState] = useState('');
@@ -37,7 +35,12 @@ export function ContactUs() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    if (name === 'phone') {
+      const numericValue = value.replace(/\D/g, '').slice(0, 10);
+      setFormData(prev => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -45,14 +48,38 @@ export function ContactUs() {
     setSelectedCity('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    
+    try {
+      const dataToSubmit = {
+        Name: formData.name || '',
+        Email: formData.email || '',
+        Phone: formData.phone || '',
+        Organisation: formData.organisation || '',
+        Subject: formData.subject || '',
+        Message: formData.message || '',
+        Type: 'Contact'
+      };
+
+      await fetch((import.meta as any).env.VITE_GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSubmit)
+      });
+      
       alert('Thank you! Your message has been sent successfully.');
-      setFormData({ name: '', email: '', phone: '', address: '', organisation: '', country: 'India', message: '', subject: '' });
-    }, 1500);
+      setFormData({ name: '', email: '', phone: '', organisation: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleDistributorSearch = (e: React.FormEvent) => {
@@ -105,7 +132,7 @@ export function ContactUs() {
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-xs font-bold text-gray-500 uppercase tracking-widest">Email</label>
-                      <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required
+                      <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange}
                         className="w-full px-5 py-3.5 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-sm outline-none" placeholder="john@company.com" />
                     </div>
                   </div>
@@ -113,8 +140,8 @@ export function ContactUs() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="phone" className="text-xs font-bold text-gray-500 uppercase tracking-widest">Phone</label>
-                      <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required
-                        className="w-full px-5 py-3.5 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-sm outline-none" placeholder="+91 98765 43210" />
+                      <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required maxLength={10} minLength={10} pattern="[0-9]{10}" title="Please enter exactly 10 digits"
+                        className="w-full px-5 py-3.5 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-sm outline-none" placeholder="10-digit mobile number" />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="organisation" className="text-xs font-bold text-gray-500 uppercase tracking-widest">Organisation</label>
@@ -125,13 +152,13 @@ export function ContactUs() {
 
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-xs font-bold text-gray-500 uppercase tracking-widest">Subject</label>
-                    <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} required
+                    <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange}
                       className="w-full px-5 py-3.5 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-sm outline-none" placeholder="How can we help?" />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-xs font-bold text-gray-500 uppercase tracking-widest">Message</label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5}
+                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} rows={5}
                       className="w-full px-5 py-3.5 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-sm outline-none resize-none" placeholder="Tell us more about your project..." />
                   </div>
 

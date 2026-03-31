@@ -4,26 +4,61 @@ import { MessageSquare, X, Send, CheckCircle2 } from 'lucide-react';
 export function GetQuoteWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    product: '',
-    message: ''
+    service_category: '',
+    project_details: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    if (name === 'phone') {
+      const numericValue = value.replace(/\D/g, '').slice(0, 10);
+      setFormData(prev => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', product: '', message: '' });
-    }, 3000);
+    setIsSubmitting(true);
+    
+    try {
+      const dataToSubmit = {
+        Name: formData.name || '',
+        Email: formData.email || '',
+        Phone: formData.phone || '',
+        Organisation: '',
+        Subject: formData.service_category || '',
+        Message: formData.project_details || '',
+        Type: 'Quote'
+      };
+
+      await fetch((import.meta as any).env.VITE_GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSubmit)
+      });
+      
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', service_category: '', project_details: '' });
+      }, 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,17 +112,17 @@ export function GetQuoteWidget() {
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="widget-email" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email *</label>
-                      <input required type="email" id="widget-email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm" placeholder="you@domain.com" />
+                      <label htmlFor="widget-email" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email</label>
+                      <input type="email" id="widget-email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm" placeholder="you@domain.com" />
                     </div>
                     <div>
                       <label htmlFor="widget-phone" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Phone *</label>
-                      <input required type="tel" id="widget-phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm" placeholder="Mobile / Landline" />
+                      <input required type="tel" id="widget-phone" name="phone" value={formData.phone} onChange={handleChange} maxLength={10} minLength={10} pattern="[0-9]{10}" title="Please enter exactly 10 digits" className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm" placeholder="10-digit mobile number" />
                     </div>
                   </div>
                   <div>
                     <label htmlFor="widget-product" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service / Area of Interest</label>
-                    <select id="widget-product" name="product" value={formData.product} onChange={handleChange} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm">
+                    <select id="widget-product" name="service_category" value={formData.service_category} onChange={handleChange} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm">
                       <option value="">Select Category (Optional)</option>
                       <option value="Waterproofing">Waterproofing Solutions</option>
                       <option value="Sealants">Expansion Joints & Sealants</option>
@@ -98,12 +133,16 @@ export function GetQuoteWidget() {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="widget-message" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Project Details *</label>
-                    <textarea required id="widget-message" name="message" value={formData.message} onChange={handleChange} rows={3} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm resize-none" placeholder="Provide details about your project specifications, area mapping, or specific issues."></textarea>
+                    <label htmlFor="widget-message" className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Project Details</label>
+                    <textarea id="widget-message" name="project_details" value={formData.project_details} onChange={handleChange} rows={3} className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500/50 focus:border-green-500 outline-none transition-all text-sm resize-none" placeholder="Provide details about your project specifications, area mapping, or specific issues."></textarea>
                   </div>
-                  <button type="submit" className="w-full mt-2 bg-blue-900 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group">
-                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    Get Instant Quote
+                  <button type="submit" disabled={isSubmitting} className="w-full mt-2 bg-blue-900 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed">
+                    {isSubmitting ? 'Sending Request...' : (
+                      <>
+                        <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        Get Instant Quote
+                      </>
+                    )}
                   </button>
                 </form>
               )}
