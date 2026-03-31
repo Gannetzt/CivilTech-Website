@@ -24,7 +24,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Acrylic Polymer Waterproofing Compound',
-    image: '/src/assets/products/POLYBOND AP.png',
+    image: new URL('../assets/products/POLYBOND AP.png', import.meta.url).href,
     features: [
       'Single component acrylic polymer based waterproofing',
       'Excellent adhesion to concrete, masonry, and plaster',
@@ -67,7 +67,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Two Component Polymerized Waterproofing Coating',
-    image: '/src/assets/products/POLYBOND 2K.jpg',
+    image: new URL('../assets/products/POLYBOND 2K.jpg', import.meta.url).href,
     features: [
       'Two component polymer modified waterproofing system',
       'Superior adhesion and flexibility',
@@ -110,7 +110,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Two Component Cementitious Flexible Waterproofing Coating',
-    image: '/src/assets/products/Polybond 2k Ultra.jpg',
+    image: new URL('../assets/products/Polybond 2k Ultra.jpg', import.meta.url).href,
     features: [
       'Ultra-flexible cementitious waterproofing coating',
       'Superior crack bridging up to 2mm',
@@ -153,7 +153,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'High Build Elastomeric Waterproofing Coating',
-    image: '/src/assets/products/POLYBOND PU.jpg',
+    image: new URL('../assets/products/POLYBOND PU.jpg', import.meta.url).href,
     features: [
       'Single component polyurethane based coating',
       'High build elastomeric membrane',
@@ -196,7 +196,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Single Component Thermal Insulation cum Waterproofing Coating',
-    image: '/src/assets/products/POLYBOND FLEXICOAT.jpg',
+    image: new URL('../assets/products/POLYBOND FLEXICOAT.jpg', import.meta.url).href,
     features: [
       'Dual function: waterproofing and thermal insulation',
       'Reduces heat transfer by up to 40%',
@@ -239,7 +239,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Rapid Setting Water Plugging Mortar (Powder)',
-    image: '/src/assets/products/INSTAPLUG -P.jpg',
+    image: new URL('../assets/products/INSTAPLUG -P.jpg', import.meta.url).href,
     features: [
       'Instant setting water plugging mortar',
       'Rapidly stops leaking water',
@@ -282,7 +282,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Liquid Shotcrete Accelerator / Rapid Hardener',
-    image: '/src/assets/products/INSTAPLUG-L.jpg',
+    image: new URL('../assets/products/INSTAPLUG-L.jpg', import.meta.url).href,
     features: [
       'Liquid rapid hardening admixture',
       'Instant set for shotcrete',
@@ -802,7 +802,7 @@ export const productsData: ProductDetail[] = [
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'Liquid Shotcrete Accelerator for Sprayed Concrete',
-    image: '/src/assets/products/INSTACRETE (Shotcrete Accelerator).jpg',
+    image: new URL('../assets/products/INSTACRETE (Shotcrete Accelerator).jpg', import.meta.url).href,
     features: [
       'High performance liquid accelerator',
       'Instant set for shotcrete / guniting',
@@ -889,7 +889,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Non Metallic Wear Resistant Floor Topping',
-    image: '/src/assets/products/NON METALLIC FLOOR HARDNER.jpg',
+    image: new URL('../assets/products/NON METALLIC FLOOR HARDNER.jpg', import.meta.url).href,
     features: [
       'Non-metallic aggregate floor hardener',
       'High abrasion resistance',
@@ -932,7 +932,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Metallic Aggregate Abrasion Resistant Floor Topping',
-    image: '/src/assets/products/METALLIC FLOOR HARDNER.jpg',
+    image: new URL('../assets/products/METALLIC FLOOR HARDNER.jpg', import.meta.url).href,
     features: [
       'Metallic aggregate floor hardener',
       'Superior abrasion resistance',
@@ -1018,7 +1018,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Self Leveling Abrasion Resistant Floor Topping',
-    image: '/src/assets/products/FLOORTOP SL (SELF LEVELLING ABBRASSION RESISTANT FLOOR TOPPING).jpg',
+    image: new URL('../assets/products/FLOORTOP SL (SELF LEVELLING ABBRASSION RESISTANT FLOOR TOPPING).jpg', import.meta.url).href,
     features: [
       'Self-leveling floor topping',
       'High strength and durability',
@@ -1106,7 +1106,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Cement Based Tile Jointing Mortar',
-    image: '/src/assets/products/TILE O FIX (Polymeric Cement Based Tile Grout).jpg',
+    image: new URL('../assets/products/TILE O FIX (Polymeric Cement Based Tile Grout).jpg', import.meta.url).href,
     features: [
       'Polymer modified tile jointing mortar',
       'High bonding strength',
@@ -1149,7 +1149,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Polymeric Cement Based Tile Joint Grout',
-    image: '/src/assets/products/CEM GROUT (Single component cementitious tile grout).jpg',
+    image: new URL('../assets/products/CEM GROUT (Single component cementitious tile grout).jpg', import.meta.url).href,
     features: [
       'Premium polymer modified grout',
       'Stain and water resistant',
@@ -1192,7 +1192,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Three Component Epoxy Tile Grout',
-    image: '/src/assets/products/TILECRETE EP – (3 COMPONENT EPOXY BASED TILE GROUT).jpg',
+    image: new URL('../assets/products/TILECRETE EP – (3 COMPONENT EPOXY BASED TILE GROUT).jpg', import.meta.url).href,
     features: [
       'Three component epoxy grout',
       'Chemical and stain resistant',
@@ -1450,7 +1450,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'High Performance Floor Cleaning Agent',
-    image: '/src/assets/products/TILE ‘O’ Clean (High performance Tile cleaning agent).jpg',
+    image: new URL('../assets/products/TILE ‘O’ Clean (High performance Tile cleaning agent).jpg', import.meta.url).href,
     features: [
       'Specialized tile and grout cleaner',
       'Removes stains and efflorescence',
@@ -1493,7 +1493,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'Thin Joint Masonry Mortar for AAC Blocks',
-    image: '/src/assets/products/BLOCKFIX C20  BLOCKFIX C10.jpg',
+    image: new URL('../assets/products/BLOCKFIX C20  BLOCKFIX C10.jpg', import.meta.url).href,
     features: [
       'High strength thin joint masonry mortar',
       'Excellent bond with AAC blocks',
@@ -1535,7 +1535,7 @@ export const productsData: ProductDetail[] = [
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'General Purpose Adhesives and Repairing Compound',
-    image: '/src/assets/products/ROCKFIX GP.jpg',
+    image: new URL('../assets/products/ROCKFIX GP.jpg', import.meta.url).href,
     features: [
       'High performance',
       'Excellent bonding',
@@ -1570,7 +1570,7 @@ export const productsData: ProductDetail[] = [
     category: 'sealants',
     categoryName: 'Expansion Joints / Sealants',
     description: 'High Build Non-Shrink Structural Repair Grout',
-    image: '/src/assets/products/HARDCRETE 55.jpg',
+    image: new URL('../assets/products/HARDCRETE 55.jpg', import.meta.url).href,
     features: [
       'Non-shrink structural repair mortar',
       'High compressive strength',
