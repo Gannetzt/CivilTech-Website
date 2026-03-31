@@ -237,11 +237,11 @@ export function ProductsPage() {
                   onClick={() => handleViewDetails(product.id)}
                   className="group bg-card rounded-[2rem] overflow-hidden border border-border hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col h-full"
                 >
-                  <div className="relative h-64 overflow-hidden bg-secondary">
+                  <div className="relative h-64 overflow-hidden bg-secondary flex justify-center items-center">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-1000"
                     />
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>

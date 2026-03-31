@@ -975,7 +975,7 @@ export const productsData: ProductDetail[] = [
     category: 'flooring',
     categoryName: 'Protection Compounds / Flooring Products',
     description: 'Food Grade Epoxy Coating for Potable Water Tanks',
-    image: 'https://images.unsplash.com/photo-1579710147304-bac018c668f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBjaGVtaWNhbCUyMGNvbnRhaW5lciUyMGdyZWVufGVufDF8fHx8MTc3MzY1ODA1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/TankCoat5G.jpg', import.meta.url).href,
     features: [
       'Food-grade certified epoxy coating',
       'Safe for potable water contact',
