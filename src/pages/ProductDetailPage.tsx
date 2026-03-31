@@ -70,13 +70,13 @@ export function ProductDetailPage() {
           <div className="lg:col-span-8 space-y-24">
             
             {/* Visual Overview */}
-            <div className="relative group/image overflow-hidden rounded-[3rem] shadow-2xl bg-secondary border border-border flex items-center justify-center">
+            <div className="relative group/image overflow-hidden rounded-[3rem] shadow-2xl bg-secondary border border-border">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-[600px] object-contain p-8 group-hover:scale-110 transition-transform duration-1000"
+                className="w-full h-[600px] object-cover group-hover:scale-110 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
 
             {/* Core Features & Advantages */}
