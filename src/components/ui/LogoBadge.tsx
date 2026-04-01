@@ -1,4 +1,4 @@
-import logo from '../assets/59663358e291026026b733e05a456c1f287e3e58.png';
+import logo from '../../assets/59663358e291026026b733e05a456c1f287e3e58.png';
 
 interface LogoBadgeProps {
   className?: string;
