@@ -5,6 +5,11 @@ import waterproofingImage from '../../assets/products/waterproofing_category_ban
 import sealantsImage from '../../assets/products/sealants_category_banner.png';
 import concreteImage from '../../assets/products/concrete_category_banner.png';
 import flooringImage from '../../assets/products/flooring_category_banner.png';
+import waterproofingExplanatory from '../../assets/products/waterproofing_explanatory.png';
+import { LogoBadge } from '../ui/LogoBadge';
+
+const sealantsExplanatory = 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
+const tilingExplanatory = 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwaW5zdGFsbGF0aW9uJTIwYWRoZXNpdmV8ZW58MXx8fHwxNzczNjYwMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
 
 const categories = [
   {
@@ -76,6 +81,7 @@ export function ProductsPreview() {
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <LogoBadge size="sm" className="top-4 left-4" />
                 {/* Overlay with Primary Color */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px] opacity-0 group-hover:opacity-100">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-card rounded-2xl flex items-center justify-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl">

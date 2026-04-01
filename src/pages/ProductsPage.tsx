@@ -8,6 +8,8 @@ import waterproofingImage from '../assets/products/waterproofing_category_banner
 import sealantsImage from '../assets/products/sealants_category_banner.png';
 import concreteImage from '../assets/products/concrete_category_banner.png';
 import flooringImage from '../assets/products/flooring_category_banner.png';
+import waterproofingExplanatory from '../assets/products/waterproofing_explanatory.png';
+import { LogoBadge } from '../components/ui/LogoBadge';
 
 interface ProductCategory {
   id: string;
@@ -60,19 +62,19 @@ const heroSlides = [
     id: 1,
     title: 'Construction Solutions',
     subtitle: 'Advanced chemicals for modern infrastructure',
-    image: 'https://images.unsplash.com/photo-1769283975130-bf51f4ae11c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwaW5kdXN0cmlhbCUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3MzY2OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: waterproofingExplanatory
   },
   {
     id: 2,
     title: 'Industrial Flooring',
     subtitle: 'High-performance epoxy and coating systems',
-    image: 'https://images.unsplash.com/photo-1771531072574-af6ed6b954c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZXBveHklMjBmbG9vcmluZyUyMHdhcmVob3VzZXxlbnwxfHx8fDE3NzM2Njk3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: flooringImage
   },
   {
     id: 3,
     title: 'Waterproofing Systems',
     subtitle: 'Complete protection against water ingress',
-    image: 'https://images.unsplash.com/photo-1591645321243-3adc1e75cfdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwbWVtYnJhbmUlMjBjb25zdHJ1Y3Rpb258ZW58MXx8fHwxNzczNjY5NzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: sealantsImage
   }
 ];
 
@@ -116,6 +118,7 @@ export function ProductsPage() {
                 }`}
               >
                 <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                <LogoBadge size="lg" className="top-8 left-8" />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -187,6 +190,7 @@ export function ProductsPage() {
                       alt={category.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                     />
+                    <LogoBadge size="sm" className="top-4 left-4" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                     <div className="absolute top-6 right-6 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold border border-white/20">
                       {category.count} Products

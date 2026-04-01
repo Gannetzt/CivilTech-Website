@@ -3,6 +3,16 @@ import { useEffect, useState, useLayoutEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import waterproofingImage from '../../assets/products/waterproofing_category_banner.png';
+import flooringImage from '../../assets/products/flooring_category_banner.png';
+import concreteImage from '../../assets/products/concrete_category_banner.png';
+import sealantsImage from '../../assets/products/sealants_category_banner.png';
+import tilingImage from '../../assets/products/tiling_category_banner.png';
+import waterproofingExplanatory from '../../assets/products/waterproofing_explanatory.png';
+import { LogoBadge } from '../ui/LogoBadge';
+
+const sealantsExplanatory = 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
+const tilingExplanatory = 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwaW5zdGFsbGF0aW9uJTIwYWRoZXNpdmV8ZW58MXx8fHwxNzczNjYwMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
 
 export function Hero() {
   const navigate = useNavigate();
@@ -74,7 +84,7 @@ export function Hero() {
       id: 'waterproofing',
       title: 'Waterproofing',
       description: 'Advanced acrylic and PU based coatings for complete structural protection against water ingress and moisture damage.',
-      image: 'https://images.unsplash.com/photo-1760331283499-abccea681c46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb25zdHJ1Y3Rpb24lMjB3YXRlcnByb29maW5nJTIwcHJvamVjdHxlbnwxfHx8fDE3NzM2NzAxOTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: waterproofingExplanatory,
       gradient: 'from-blue-950 via-blue-950/40',
       accent: 'bg-blue-500',
       textAccent: 'text-blue-400',
@@ -84,7 +94,7 @@ export function Hero() {
       id: 'flooring',
       title: 'Industrial Flooring',
       description: 'High-performance epoxy and polyurethane flooring systems for heavy-duty industrial and commercial environments.',
-      image: 'https://images.unsplash.com/photo-1771531072574-af6ed6b954c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZXBveHklMjBmbG9vcmluZyUyMHdhcmVob3VzZXxlbnwxfHx8fDE3NzM2Njk3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: flooringImage,
       gradient: 'from-blue-900 via-blue-900/40',
       accent: 'bg-blue-600',
       textAccent: 'text-blue-400',
@@ -94,7 +104,7 @@ export function Hero() {
       id: 'concrete',
       title: 'Concrete Aids',
       description: 'Superior curing compounds and chemical additives to enhance structural strength and long-term durability of concrete.',
-      image: 'https://images.unsplash.com/photo-1768617154338-f7cd88a87039?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGN1cmluZyUyMGNvbXBvdW5kJTIwc3ByYXl8ZW58MXx8fHwxNzczNjYwMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://images.unsplash.com/photo-1714386548315-4d3b4a1009a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGN1cmluZyUyMGNvbXBvdW5kJTIwc3ByYXl8ZW58MXx8fHwxNzczNjYwMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       gradient: 'from-slate-900 via-slate-900/40',
       accent: 'bg-blue-500',
       textAccent: 'text-blue-400',
@@ -104,11 +114,21 @@ export function Hero() {
       id: 'sealants',
       title: 'Expansion Joints',
       description: 'Highly flexible sealing solutions designed to accommodate movement and prevent leakage in construction joints.',
-      image: 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: sealantsExplanatory,
       gradient: 'from-blue-800 via-blue-800/40',
       accent: 'bg-blue-400',
       textAccent: 'text-blue-300',
       buttonText: 'See Sealants'
+    },
+    {
+      id: 'tiling',
+      title: 'Tiling & Adhesives',
+      description: 'Professional grade adhesives and high-performance grouts for durable and aesthetic tiling installations.',
+      image: tilingExplanatory,
+      gradient: 'from-green-900 via-green-900/40',
+      accent: 'bg-green-500',
+      textAccent: 'text-green-400',
+      buttonText: 'Explore Tiling'
     }
   ];
 
@@ -154,6 +174,7 @@ export function Hero() {
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                         alt={card.title}
                       />
+                      <LogoBadge size="sm" className="top-6 left-6" />
                       <div className={`absolute inset-0 bg-gradient-to-t ${card.gradient} via-transparent to-transparent opacity-70 group-hover:opacity-85 transition-all duration-500`}></div>
                       
                       <div className="absolute inset-0 p-6 sm:p-8 lg:p-10 flex flex-col justify-end bg-gradient-to-t from-blue-950/80 via-transparent to-transparent">
