@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router';
 import { Search, ArrowRight } from 'lucide-react';
-import tilingImage from '../../assets/products/tiling.png';
-import waterproofingImage from '../../assets/products/waterproofing.png';
-import groutsImage from '../../assets/products/Grouts And Anchors.jpg';
-import protectiveImage from '../../assets/products/Protective Coatings 1.jpg';
-import exteriorImage from '../../assets/products/Exterior Protective Paints.jpg';
+import tilingImage from '../../assets/products/tiling_category_banner.png';
+import waterproofingImage from '../../assets/products/waterproofing_category_banner.png';
+import sealantsImage from '../../assets/products/sealants_category_banner.png';
+import concreteImage from '../../assets/products/concrete_category_banner.png';
+import flooringImage from '../../assets/products/flooring_category_banner.png';
 
 const categories = [
   {
@@ -17,24 +17,24 @@ const categories = [
     id: 'sealants',
     title: 'Expansion Joints / Sealants',
     count: 7,
-    image: groutsImage
+    image: sealantsImage
   },
   {
     id: 'concrete',
     title: 'Concrete Aids',
     count: 6,
-    image: exteriorImage
+    image: concreteImage
   },
   {
     id: 'flooring',
     title: 'Protection Compounds / Flooring Products',
     count: 6,
-    image: protectiveImage
+    image: flooringImage
   },
   {
     id: 'tiling',
     title: 'Tiling, Adhesives & Repairing Compounds',
-    count: 10,
+    count: 11,
     image: tilingImage
   }
 ];

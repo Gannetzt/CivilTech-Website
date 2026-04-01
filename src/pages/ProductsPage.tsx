@@ -3,8 +3,11 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { ArrowLeft, ArrowRight, Package, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
 import { SEO } from '../components/seo/SEO';
 import { productsData } from '../data/products';
-import tilingImage from '../assets/products/tiling.png';
-import waterproofingImage from '../assets/products/waterproofing.png';
+import tilingImage from '../assets/products/tiling_category_banner.png';
+import waterproofingImage from '../assets/products/waterproofing_category_banner.png';
+import sealantsImage from '../assets/products/sealants_category_banner.png';
+import concreteImage from '../assets/products/concrete_category_banner.png';
+import flooringImage from '../assets/products/flooring_category_banner.png';
 
 interface ProductCategory {
   id: string;
@@ -18,35 +21,35 @@ const categories: ProductCategory[] = [
   {
     id: 'waterproofing',
     name: 'Waterproofing Coatings',
-    count: 5,
+    count: 7,
     description: 'High-performance specialized coating solutions',
     image: waterproofingImage
   },
   {
     id: 'sealants',
     name: 'Expansion Joints / Sealants',
-    count: 6,
+    count: 7,
     description: 'High-performance sealing solutions for joints',
-    image: 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: sealantsImage
   },
   {
     id: 'concrete',
     name: 'Concrete Aids',
-    count: 5,
+    count: 6,
     description: 'Essential additives for superior concrete performance',
-    image: 'https://images.unsplash.com/photo-1714386548315-4d3b4a1009a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGN1cmluZyUyMGNvbXBvdW5kJTIwc3ByYXl8ZW58MXx8fHwxNzczNjYwMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: concreteImage
   },
   {
     id: 'flooring',
     name: 'Protection Compounds / Flooring Products',
     count: 6,
     description: 'Durable flooring solutions for industrial applications',
-    image: 'https://images.unsplash.com/photo-1772305595483-6b058aff40f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlcG94eSUyMGZsb29yJTIwY29hdGluZyUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzczNjYwMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: flooringImage
   },
   {
     id: 'tiling',
     name: 'Tiling, Adhesives & Repairing Compounds',
-    count: 9,
+    count: 11,
     description: 'Professional grade adhesives and repair solutions',
     image: tilingImage
   }
