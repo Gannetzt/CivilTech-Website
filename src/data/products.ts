@@ -24,7 +24,7 @@ export const productsData: ProductDetail[] = [
     category: 'waterproofing',
     categoryName: 'Waterproofing Coatings',
     description: 'Acrylic Polymer Waterproofing Compound',
-    image: new URL('../assets/products/POLYBOND AP.png', import.meta.url).href,
+    image: new URL('../assets/products/PolyBond AP copy.png', import.meta.url).href,
     features: [
       'Single component acrylic polymer based waterproofing',
       'Excellent adhesion to concrete, masonry, and plaster',
@@ -323,11 +323,11 @@ export const productsData: ProductDetail[] = [
   // Expansion Joints / Sealants
   {
     id: 's1',
-    name: 'FlexiTape EPDM',
+    name: 'Flexi Tape EPDM',
     category: 'sealants',
     categoryName: 'Expansion Joints / Sealants',
     description: 'EPDM Tape for Expansion Joints',
-    image: 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Flexi Tape EPDM.png', import.meta.url).href,
     features: [
       'EPDM rubber-based expansion joint tape',
       'High elasticity and recovery',
@@ -452,11 +452,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 's4',
-    name: 'PS 55 GG',
+    name: 'Seal It 55',
     category: 'sealants',
     categoryName: 'Expansion Joints / Sealants',
     description: 'Two Component Gun Grade Poly Sulphide Sealant',
-    image: 'https://images.unsplash.com/photo-1673978484089-128ba958e4d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwZ3JvdXQlMjBhbmNob3JzJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MzY1ODY0OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Seal It 55.png', import.meta.url).href,
     features: [
       'Two component polysulphide sealant',
       'Gun grade consistency for easy application',
@@ -538,11 +538,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 's6',
-    name: 'PU 50',
+    name: 'Neoseal 50',
     category: 'sealants',
     categoryName: 'Expansion Joints / Sealants',
     description: 'Single Component Gun Grade Poly Urethane Sealant',
-    image: 'https://images.unsplash.com/photo-1720156066527-41497702fc63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBhZGhlc2l2ZSUyMHByb2R1Y3RzfGVufDF8fHx8MTc3MzY1Nzg2M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Neoseal 50.png', import.meta.url).href,
     features: [
       'Single component polyurethane sealant',
       'Moisture curing technology',
@@ -583,11 +583,11 @@ export const productsData: ProductDetail[] = [
   // Concrete Aids (continuing with similar detail for all products...)
   {
     id: 'c1',
-    name: 'ConLease',
+    name: 'Conlease',
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'Concrete Mould Release Agent',
-    image: 'https://images.unsplash.com/photo-1714386548315-4d3b4a1009a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGN1cmluZyUyMGNvbXBvdW5kJTIwc3ByYXl8ZW58MXx8fHwxNzczNjYwMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Conlease.png', import.meta.url).href,
     features: [
       'Ready to use mould release agent',
       'Prevents concrete adhesion to formwork',
@@ -626,11 +626,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 'c2',
-    name: 'ConCure (WB)',
+    name: 'Concure WB',
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'Wax Based Curing Compound',
-    image: 'https://images.unsplash.com/photo-1660476960636-0f06a095f88b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGFkbWl4dHVyZXMlMjBwb3VyaW5nJTIwbWl4ZXJ8ZW58MXx8fHwxNzczNjU4NjUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Concure WB.png', import.meta.url).href,
     features: [
       'Wax emulsion based curing compound',
       'Forms impermeable membrane',
@@ -669,11 +669,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 'c3',
-    name: 'ConCure (PRB)',
+    name: 'Concure PRB',
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'Polymeric Resin Based Curing Compound',
-    image: 'https://images.unsplash.com/photo-1567238563567-b99d8ac66e9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMHJlcGFpciUyMHJlc3RvcmF0aW9uJTIwd29ya2VyfGVufDF8fHx8MTc3MzY1ODY0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Concure PRB.png', import.meta.url).href,
     features: [
       'Acrylic resin based curing compound',
       'High efficiency water retention',
@@ -712,11 +712,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 'c4',
-    name: 'NanoCure',
+    name: 'Nano Cure',
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'Non Film Forming Curing Compound with Advanced Technology',
-    image: 'https://images.unsplash.com/photo-1728038761120-9bb76cbac906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBjaGVtaWNhbCUyMHByb2R1Y3RzJTIwcGFja2FnaW5nfGVufDF8fHx8MTc3MzY1Nzg2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/Nano Cure.png', import.meta.url).href,
     features: [
       'Advanced nano-technology based curing',
       'Non-film forming formula',
@@ -759,7 +759,7 @@ export const productsData: ProductDetail[] = [
     category: 'concrete',
     categoryName: 'Concrete Aids',
     description: 'High Performance PU Injection Foam Grout',
-    image: 'https://images.unsplash.com/photo-1625337905408-7b6fe970e187?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBtb3J0YXIlMjBiYWclMjBwcm9kdWN0fGVufDF8fHx8MTc3MzY1ODA1Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: new URL('../assets/products/CCC500.png', import.meta.url).href,
     features: [
       'Two component polyurethane injection foam',
       'Rapid expansion and curing',
@@ -1531,11 +1531,11 @@ export const productsData: ProductDetail[] = [
   },
   {
     id: 't11',
-    name: 'RockfixGP',
+    name: 'Rockfix GP',
     category: 'tiling',
     categoryName: 'Tiling, Adhesives & Repairing Compounds',
     description: 'General Purpose Adhesives and Repairing Compound',
-    image: new URL('../assets/products/ROCKFIX GP.jpg', import.meta.url).href,
+    image: new URL('../assets/products/Rockfix GP.png', import.meta.url).href,
     features: [
       'High performance',
       'Excellent bonding',
