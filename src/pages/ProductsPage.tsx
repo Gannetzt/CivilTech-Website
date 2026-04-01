@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { ArrowLeft, ArrowRight, Package, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
+import { SEO } from '../components/seo/SEO';
 import { productsData } from '../data/products';
 import tilingImage from '../assets/products/tiling.png';
 import waterproofingImage from '../assets/products/waterproofing.png';
@@ -95,6 +96,11 @@ export function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background transition-colors duration-300">
+      <SEO 
+        title={selectedCategory ? categories.find(c => c.id === selectedCategory)?.name : 'Products & Solutions'}
+        description={selectedCategory ? categories.find(c => c.id === selectedCategory)?.description : 'Explore our comprehensive range of high-performance construction chemicals including waterproofing matrices, joint sealants, concrete aids, and protection compounds.'}
+        url={`https://civiltechchemicals.com/products${selectedCategory ? `?category=${selectedCategory}` : ''}`}
+      />
       {!selectedCategory ? (
         <>
           {/* Modern Hero Section */}

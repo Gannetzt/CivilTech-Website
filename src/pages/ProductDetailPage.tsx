@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router';
 import { ArrowLeft, CheckCircle, Wrench, TrendingUp, FileText, ChevronRight, Download, Mail, Package } from 'lucide-react';
+import { SEO } from '../components/seo/SEO';
 import { productsData } from '../data/products';
 
 export function ProductDetailPage() {
@@ -10,6 +11,7 @@ export function ProductDetailPage() {
   if (!product) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center text-center p-8 transition-colors duration-300">
+        <SEO title="Product Not Found" description="The requested product could not be found." />
         <div className="max-w-md">
           <Package className="w-16 h-16 text-muted-foreground mx-auto mb-6" />
           <h2 className="text-3xl font-black text-foreground mb-4 tracking-tighter">Product Not Found</h2>
@@ -26,6 +28,13 @@ export function ProductDetailPage() {
 
   return (
     <div className="min-h-screen bg-background transition-colors duration-300">
+      <SEO 
+        title={product.name} 
+        description={product.description} 
+        keywords={`${product.name}, ${product.categoryName}, Construction Chemicals, Civiltech`}
+        url={`https://civiltechchemicals.com/products/${product.id}`}
+        image={product.image}
+      />
       {/* Dynamic Header */}
       <div className="bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
