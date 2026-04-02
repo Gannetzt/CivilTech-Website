@@ -62,19 +62,22 @@ const heroSlides = [
     id: 1,
     title: 'Construction Solutions',
     subtitle: 'Advanced chemicals for modern infrastructure',
-    image: waterproofingExplanatory
+    image: waterproofingExplanatory,
+    categoryId: 'waterproofing'
   },
   {
     id: 2,
     title: 'Industrial Flooring',
     subtitle: 'High-performance epoxy and coating systems',
-    image: flooringImage
+    image: flooringImage,
+    categoryId: 'flooring'
   },
   {
     id: 3,
     title: 'Waterproofing Systems',
     subtitle: 'Complete protection against water ingress',
-    image: sealantsImage
+    image: sealantsImage,
+    categoryId: 'sealants'
   }
 ];
 
@@ -130,7 +133,7 @@ export function ProductsPage() {
                         {slide.subtitle}
                       </p>
                       <button 
-                        onClick={() => handleCategoryClick('waterproofing')}
+                        onClick={() => handleCategoryClick(heroSlides[currentSlide].categoryId)}
                         className="bg-white text-primary hover:bg-green-600 hover:text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105 shadow-xl"
                       >
                         Explore Solutions
