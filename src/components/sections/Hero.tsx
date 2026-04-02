@@ -114,7 +114,7 @@ export function Hero() {
       id: 'sealants',
       title: 'Expansion Joints',
       description: 'Highly flexible sealing solutions designed to accommodate movement and prevent leakage in construction joints.',
-      image: sealantsExplanatory,
+      image: sealantsImage,
       gradient: 'from-blue-800 via-blue-800/40',
       accent: 'bg-blue-400',
       textAccent: 'text-blue-300',

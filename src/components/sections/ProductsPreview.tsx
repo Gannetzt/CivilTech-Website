@@ -2,9 +2,9 @@ import { useNavigate } from 'react-router';
 import { Search, ArrowRight } from 'lucide-react';
 import tilingImage from '../../assets/products/tiling_category_banner.png';
 import waterproofingImage from '../../assets/products/waterproofing_category_banner.png';
-import sealantsImage from '../../assets/products/sealants_category_banner.png';
+import sealantsImage from '../../assets/products/sealants_category_banner.jpeg';
 import concreteImage from '../../assets/products/concrete_category_banner.png';
-import flooringImage from '../../assets/products/flooring_category_banner.png';
+import flooringImage from '../../assets/products/flooring_category_banner.jpeg';
 import waterproofingExplanatory from '../../assets/products/waterproofing_explanatory.png';
 import { LogoBadge } from '../ui/LogoBadge';
 
