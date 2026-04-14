@@ -90,8 +90,20 @@ export function ProductsPage() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
 
+  const categoryCounts = productsData.reduce((acc, product) => {
+    if (!product.hidden) {
+      acc[product.category] = (acc[product.category] || 0) + 1;
+    }
+    return acc;
+  }, {} as Record<string, number>);
+
+  const dynamicCategories = categories.map(cat => ({
+    ...cat,
+    count: categoryCounts[cat.id] || 0
+  }));
+
   const filteredProducts = selectedCategory
-    ? productsData.filter(p => p.category === selectedCategory)
+    ? productsData.filter(p => p.category === selectedCategory && !p.hidden)
     : [];
 
   const handleCategoryClick = (categoryId: string) => {
@@ -181,7 +193,7 @@ export function ProductsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categories.map((category) => (
+              {dynamicCategories.map((category) => (
                 <div
                   key={category.id}
                   onClick={() => handleCategoryClick(category.id)}

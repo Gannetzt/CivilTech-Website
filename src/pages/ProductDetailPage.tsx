@@ -8,7 +8,7 @@ export function ProductDetailPage() {
   const navigate = useNavigate();
   const product = productsData.find(p => p.id === productId);
 
-  if (!product) {
+  if (!product || product.hidden) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center text-center p-8 transition-colors duration-300">
         <SEO title="Product Not Found" description="The requested product could not be found." />

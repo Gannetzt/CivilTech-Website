@@ -14,6 +14,7 @@ export interface ProductDetail {
   }[];
   applications: string[];
   tdsUrl?: string;
+  hidden?: boolean;
 }
 
 export const productsData: ProductDetail[] = [
@@ -1141,7 +1142,8 @@ export const productsData: ProductDetail[] = [
       'Commercial Projects',
       'Wet Areas',
       'Swimming Pools'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't2',
@@ -1184,7 +1186,8 @@ export const productsData: ProductDetail[] = [
       'Hotels and Restaurants',
       'Shopping Malls',
       'Swimming Pools'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't3',
@@ -1270,7 +1273,8 @@ export const productsData: ProductDetail[] = [
       'Industrial Bonding',
       'Renovation Works',
       'Infrastructure Projects'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't5',
@@ -1356,7 +1360,8 @@ export const productsData: ProductDetail[] = [
       'Precast Structures',
       'Infrastructure Works',
       'Segmental Construction'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't7',
@@ -1399,7 +1404,8 @@ export const productsData: ProductDetail[] = [
       'Commercial Projects',
       'Renovation Works',
       'Facade Repairs'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't8',
@@ -1442,7 +1448,8 @@ export const productsData: ProductDetail[] = [
       'Infrastructure Projects',
       'Machine Installations',
       'Structural Works'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't9',
@@ -1485,7 +1492,8 @@ export const productsData: ProductDetail[] = [
       'Commercial Spaces',
       'Post-Construction',
       'Maintenance Cleaning'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't10',
@@ -1527,7 +1535,8 @@ export const productsData: ProductDetail[] = [
       'Commercial Buildings',
       'Institutional Projects',
       'Industrial Units'
-    ]
+    ],
+    hidden: true
   },
   {
     id: 't11',
