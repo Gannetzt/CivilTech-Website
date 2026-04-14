@@ -121,9 +121,14 @@ export function Header() {
                 <span className="group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors">Mon-Sat: 9:00 AM - 6:00 PM</span>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 group cursor-default">
-              <span className="text-gray-300">Email:</span>
-              <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">mailtociviltech@gmail.com</span>
+            <div className="flex items-center gap-6">
+              <div className="hidden md:flex items-center gap-1.5 group cursor-default bg-blue-900/5 dark:bg-blue-400/5 px-3 py-1 rounded-full border border-blue-900/10 dark:border-blue-400/10">
+                <span className="text-blue-900 dark:text-blue-400 font-extrabold tracking-[0.2em] text-[9px]">ISO 9001:2015 CERTIFIED COMPANY</span>
+              </div>
+              <div className="flex items-center gap-1.5 group cursor-default">
+                <span className="text-gray-300">Email:</span>
+                <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">mailtociviltech@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>

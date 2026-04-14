@@ -52,6 +52,15 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+            <div className="pt-6 border-t border-white/10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-green-400 mb-3">Products Tested By / Certified</p>
+              <div className="flex items-center gap-3 bg-white p-2 rounded max-w-xs shadow-inner">
+                <img src="/assets/certifications/bureau-veritas-red.png" alt="Bureau Veritas Certification" className="h-10 w-auto object-contain mix-blend-multiply" />
+                <div className="h-8 w-px bg-gray-300"></div>
+                <img src="/assets/certifications/iso-9001.png" alt="ISO 9001:2015" className="h-8 w-auto object-contain mix-blend-multiply" />
+              </div>
+            </div>
           </div>
 
           {/* Quick Links Sections */}

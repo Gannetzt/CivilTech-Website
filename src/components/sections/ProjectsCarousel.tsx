@@ -36,18 +36,45 @@ import maritimeTerminal from '../../assets/projects/maritime_terminal.png';
 
 const projects = [
   {
-    title: "Global Maritime Terminal",
-    location: "Mumbai Port Trust",
+    title: "Inorbit Mall",
+    location: "Hyderabad",
     category: "Waterproofing",
-    description: "Full-scale crystaline waterproofing and protective coatings for high-salinity marine environments.",
-    image: maritimeTerminal
+    description: "Waterproofing and protective coating solutions to ensure structural integrity and long-term protection against environmental factors.",
+    image: "/assets/casestudies/inorbit-mall-hyderabad.jpg"
   },
   {
-    title: "Tech-City Hub",
-    location: "Bangalore",
+    title: "The Sirpur Paper Mills Limited",
+    location: "Kaghaznagar, Telangana",
     category: "Industrial Flooring",
     description: "Self-leveling epoxy flooring system for a 200,000 sq.ft. clean-room manufacturing facility.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80"
+    image: "/assets/casestudies/Sirpur Paper mill work.jpeg",
+    video: "/assets/casestudies/Sirpur Paper mill work video.mp4",
+    image2: "/assets/casestudies/Sirpur Paper mill work 2.jpeg",
+    image3: "/assets/casestudies/Sirpur Paper mill work 3.jpeg"
+  },
+  {
+    title: "L&T Metro",
+    location: "Nampally and Moosarambagh stations",
+    category: "Concrete Curing Compounds",
+    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
+    image: "/assets/casestudies/L&T metro.jpeg"
+  },
+  {
+    title: "AP Capital region development authority (APCRDA)",
+    location: "Amaravati",
+    category: "RockFix GP Block Jointing mortar",
+    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
+    image: "/assets/casestudies/AP project.jpeg",
+    video: "/assets/casestudies/Jointing mortar.mp4"
+  },
+  {
+    title: " Aparna sarovar ",
+    location: "Hyderabad",
+    category: "FloorTop SL ,",
+    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
+    image: "/assets/casestudies/Aparna sarovar.jpeg",
+    image2: "/assets/casestudies/Aparna sarovar 2.jpeg",
+    video: "/assets/casestudies/Aparna sarovar.mp4"
   },
   {
     title: "Grand Plaza Infrastructure",
@@ -88,6 +115,63 @@ const clients = [
   { name: "Client 28", logo: p28 },
   { name: "Client 29", logo: p29 }
 ];
+
+const ProjectMedia = ({ project, isActive }: { project: any, isActive: boolean }) => {
+  const media = [];
+  if (project.image) media.push({ type: 'image', src: project.image });
+  if (project.video) media.push({ type: 'video', src: project.video });
+  if (project.image2) media.push({ type: 'image', src: project.image2 });
+  if (project.image3) media.push({ type: 'image', src: project.image3 });
+
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+
+  useLayoutEffect(() => {
+    if (!isActive) {
+      setCurrentMediaIndex(0);
+      return;
+    }
+    
+    if (media.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentMediaIndex(prev => (prev + 1) % media.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, [isActive, media.length]);
+
+  return (
+    <>
+      {media.map((item, idx) => {
+        const isMediaActive = idx === currentMediaIndex;
+        
+        return (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ${isMediaActive ? 'opacity-100' : 'opacity-0'}`}
+          >
+            {item.type === 'video' ? (
+              <video
+                src={item.src}
+                className="w-full h-full object-cover transition-transform duration-[10000ms] ease-out group-hover/carousel:scale-110"
+                autoPlay={isActive}
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <img
+                src={item.src}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-[10000ms] ease-out group-hover/carousel:scale-110"
+              />
+            )}
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
 export function ProjectsCarousel() {
   const navigate = useNavigate();
@@ -155,11 +239,7 @@ export function ProjectsCarousel() {
                 className={`absolute inset-0 transition-all duration-[1000ms] ${index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
                   }`}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-[10000ms] ease-out group-hover/carousel:scale-110"
-                />
+                <ProjectMedia project={project} isActive={index === currentIndex} />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
 
                 <div className="absolute inset-0 p-6 sm:p-12 lg:p-16 flex flex-col justify-end">

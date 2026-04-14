@@ -73,6 +73,14 @@ const caseStudies = [
     image: 'https://images.unsplash.com/photo-1761034278174-bf8d69530182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlJTIwZmxvb3J8ZW58MXx8fHwxNzY1ODgyMjk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     sector: 'Industrial',
     solution: 'Industrial Flooring'
+  },
+  {
+    title: 'Inorbit Mall',
+    location: 'Hyderabad',
+    description: 'Waterproofing and protective coating solutions implemented at Inorbit Mall, Hyderabad to ensure structural integrity and long-term protection against environmental factors.',
+    image: '/assets/casestudies/inorbit-mall-hyderabad.jpg',
+    sector: 'Buildings',
+    solution: 'Waterproofing'
   }
 ];
 
