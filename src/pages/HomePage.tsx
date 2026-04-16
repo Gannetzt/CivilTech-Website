@@ -2,7 +2,6 @@ import { Hero } from '../components/sections/Hero';
 import { FeaturedServices } from '../components/sections/FeaturedServices';
 import { About } from '../components/sections/About';
 import { ProductsPreview } from '../components/sections/ProductsPreview';
-import { ProjectsCarousel } from '../components/sections/ProjectsCarousel';
 import { TechnicalResources } from '../components/sections/TechnicalResources';
 import { Stakeholders } from '../components/sections/Stakeholders';
 import { SEO } from '../components/seo/SEO';
@@ -27,7 +26,6 @@ export function HomePage() {
       <Stakeholders />
       
       <About />
-      <ProjectsCarousel />
       <TechnicalResources />
     </>
   );

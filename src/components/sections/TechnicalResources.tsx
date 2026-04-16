@@ -16,61 +16,35 @@ const categories: ResourceCategory[] = [
   {
     id: 'datasheets',
     title: 'Product Datasheets',
-    description: 'Comprehensive technical specifications and performance data for all product lines.',
-    count: '215 Documents',
+    description: 'Comprehensive technical specifications, brochures and performance data for all product lines.',
+    count: '6 Documents',
     icon: FileCheck,
     color: 'text-blue-600',
     bgIcon: 'bg-blue-50'
-  },
-  {
-    id: 'guides',
-    title: 'Installation Guides',
-    description: 'Step-by-step professional instructions for proper site application and mixing.',
-    count: '85 Guides',
-    icon: HardHat,
-    color: 'text-green-600',
-    bgIcon: 'bg-green-50'
-  },
-  {
-    id: 'sds',
-    title: 'Safety Data Sheets',
-    description: 'Critical safety information, handling protocols, and environmental standards (MSDS).',
-    count: '192 SDS',
-    icon: ShieldAlert,
-    color: 'text-orange-600',
-    bgIcon: 'bg-orange-50'
-  },
-  {
-    id: 'casestudies',
-    title: 'Case Studies',
-    description: 'Real-world project performance reports and structural success stories.',
-    count: '42 Studies',
-    icon: BookOpen,
-    color: 'text-purple-600',
-    bgIcon: 'bg-purple-50'
   }
 ];
 
 const mockDocuments = {
   datasheets: [
-    { id: '1', name: 'Nitobond SBR (Latex)', size: '1.2 MB', version: 'v3.1', date: 'Oct 2025' },
-    { id: '2', name: 'Conbextra GP', size: '2.4 MB', version: 'v2.0', date: 'Jan 2026' },
-    { id: '3', name: 'Nitocote EP405', size: '0.8 MB', version: 'v4.2', date: 'Dec 2025' },
-    { id: '4', name: 'Proofex Engage', size: '3.1 MB', version: 'v1.5', date: 'Feb 2026' },
-    { id: '5', name: 'LOKFIX S', size: '1.5 MB', version: 'v2.1', date: 'Mar 2026' },
+    { id: '1', name: 'Civil Tech Full Catalogue', size: '7.2 MB', version: '2025', date: 'Oct 2025', path: '/assets/Brochures/Civil Tech Catalogue.pdf' },
+    { id: '2', name: 'Poly Bond 2K TDS', size: '3.4 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
+    { id: '3', name: 'Trujoint Flexitape TDS', size: '2.8 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
+    { id: '4', name: 'Civiltech Report', size: '80 KB', version: '1.0', date: 'Dec 2025', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
+    { id: '5', name: 'Product Brochure 1', size: '1.7 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Document 8.pdf' },
+    { id: '6', name: 'Product Brochure 2', size: '11.3 MB', version: '1.0', date: 'Sep 2025', path: '/assets/Brochures/DOC-20250902-WA0017..pdf' },
   ],
   guides: [
-    { id: '1', name: 'Surface Preparation Guide', size: '4.2 MB', version: 'v5.0', date: 'Jan 2026' },
-    { id: '2', name: 'Concrete Repair Manual', size: '8.5 MB', version: 'v3.2', date: 'Feb 2026' },
-    { id: '3', name: 'Waterproofing Application Guide', size: '12 MB', version: 'v6.1', date: 'Oct 2025' },
+    { id: '1', name: 'Surface Preparation Guide', size: '4.2 MB', version: 'v5.0', date: 'Jan 2026', path: '#' },
+    { id: '2', name: 'Concrete Repair Manual', size: '8.5 MB', version: 'v3.2', date: 'Feb 2026', path: '#' },
+    { id: '3', name: 'Waterproofing Application Guide', size: '12 MB', version: 'v6.1', date: 'Oct 2025', path: '#' },
   ],
   sds: [
-    { id: '1', name: 'SDS: Nitobond EP', size: '0.4 MB', version: '2026 Edition', date: 'Jan 2026' },
-    { id: '2', name: 'SDS: Conbextra HF', size: '0.4 MB', version: '2026 Edition', date: 'Feb 2026' },
+    { id: '1', name: 'SDS: Nitobond EP', size: '0.4 MB', version: '2026 Edition', date: 'Jan 2026', path: '#' },
+    { id: '2', name: 'SDS: Conbextra HF', size: '0.4 MB', version: '2026 Edition', date: 'Feb 2026', path: '#' },
   ],
   casestudies: [
-    { id: '1', name: 'Hyderabad Metro Infrastructure', size: '15 MB', version: 'Project Spotlight', date: '2024' },
-    { id: '2', name: 'Marine Terminal Restoration', size: '22 MB', version: 'Industrial Report', date: '2025' },
+    { id: '1', name: 'Hyderabad Metro Infrastructure', size: '15 MB', version: 'Project Spotlight', date: '2024', path: '#' },
+    { id: '2', name: 'Marine Terminal Restoration', size: '22 MB', version: 'Industrial Report', date: '2025', path: '#' },
   ]
 };
 
@@ -80,15 +54,15 @@ export function TechnicalResources() {
 
   const currentCategory = categories.find(c => c.id === selectedCategory);
   const documents = selectedCategory ? mockDocuments[selectedCategory as keyof typeof mockDocuments] : [];
-  
-  const filteredDocuments = documents.filter(doc => 
+
+  const filteredDocuments = documents.filter(doc =>
     doc.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <section className="py-24 bg-background transition-colors duration-300" id="resources">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <AnimatePresence mode="wait">
           {!selectedCategory ? (
             <motion.div
@@ -103,12 +77,12 @@ export function TechnicalResources() {
                 </div>
                 <h2 className="text-foreground text-4xl lg:text-5xl font-bold mb-6">Technical Resources</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-                  Access Civiltech's complete library of engineering specifications, 
+                  Access Civiltech's complete library of engineering specifications,
                   site manuals, and safety documentation.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-8">
                 {categories.map((category) => (
                   <div
                     key={category.id}
@@ -116,14 +90,14 @@ export function TechnicalResources() {
                     className="group bg-card border border-border rounded-3xl p-6 sm:p-8 hover:shadow-2xl hover:border-green-500/20 transition-all duration-500 cursor-pointer relative overflow-hidden"
                   >
                     <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-secondary/50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-green-50 dark:group-hover:bg-green-900/20 transition-colors"></div>
-                    
+
                     <div className={`w-12 h-12 sm:w-14 sm:h-14 ${category.bgIcon} dark:bg-opacity-10 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 relative z-10 group-hover:scale-110 transition-transform`}>
                       <category.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${category.color}`} />
                     </div>
-                    
+
                     <h3 className="text-card-foreground font-bold text-lg sm:text-xl mb-2 sm:mb-3 relative z-10">{category.title}</h3>
                     <p className="text-muted-foreground text-xs sm:text-sm mb-6 leading-relaxed relative z-10">{category.description}</p>
-                    
+
                     <div className="flex items-center justify-between relative z-10">
                       <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-blue-900/40 group-hover:text-green-600 transition-colors">
                         {category.count}
@@ -137,13 +111,16 @@ export function TechnicalResources() {
               </div>
 
               <div className="mt-12 sm:mt-20 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                <button className="bg-primary hover:bg-green-600 text-primary-foreground px-8 sm:px-10 py-3 sm:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 font-bold shadow-xl shadow-primary/20 text-sm sm:text-base transform hover:scale-105">
+                <button
+                  onClick={() => window.open('/assets/Brochures/Civil Tech Catalogue.pdf', '_blank')}
+                  className="bg-primary hover:bg-green-600 text-primary-foreground px-8 sm:px-10 py-3 sm:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 font-bold shadow-xl shadow-primary/20 text-sm sm:text-base transform hover:scale-105"
+                >
                   <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Full Product Catalog 2026
+                  Full Product Catalog
                 </button>
-                <button className="bg-background hover:bg-primary hover:text-white text-foreground px-8 sm:px-10 py-3 sm:py-4 rounded-2xl border-2 border-border transition-all font-bold text-sm sm:text-base transform hover:scale-105">
+                {/* <button className="bg-background hover:bg-primary hover:text-white text-foreground px-8 sm:px-10 py-3 sm:py-4 rounded-2xl border-2 border-border transition-all font-bold text-sm sm:text-base transform hover:scale-105">
                   Custom Resource Request
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ) : (
@@ -155,7 +132,7 @@ export function TechnicalResources() {
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
                 <div className="flex items-center gap-6">
-                  <button 
+                  <button
                     onClick={() => setSelectedCategory(null)}
                     className="p-3 bg-secondary hover:bg-green-500 hover:text-white rounded-full transition-all group"
                   >
@@ -188,10 +165,10 @@ export function TechnicalResources() {
                   <div className="col-span-3 md:col-span-1 text-right">Size</div>
                   <div className="col-span-3 md:col-span-2 text-right">Actions</div>
                 </div>
-                
+
                 <div className="divide-y divide-border">
                   {filteredDocuments.map((doc) => (
-                    <div 
+                    <div
                       key={doc.id}
                       className="grid grid-cols-12 px-8 py-6 items-center hover:bg-primary/5 transition-colors group"
                     >
@@ -211,11 +188,15 @@ export function TechnicalResources() {
                         {doc.size}
                       </div>
                       <div className="col-span-3 md:col-span-2 flex justify-end items-center gap-3">
-                        <button className="p-2 text-foreground hover:text-green-600 transition-colors" title="View PDF">
+                        <button
+                          onClick={() => doc.path !== '#' && window.open(doc.path, '_blank')}
+                          className="p-2 text-foreground hover:text-green-600 transition-colors"
+                          title="View PDF"
+                        >
                           <BookOpen className="w-5 h-5" />
                         </button>
-                        <button 
-                          onClick={() => window.open('/src/assets/documents/sample-tds.pdf', '_blank')}
+                        <button
+                          onClick={() => doc.path !== '#' && window.open(doc.path, '_blank')}
                           className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold transition-all shadow-sm"
                         >
                           <Download className="w-4 h-4" />

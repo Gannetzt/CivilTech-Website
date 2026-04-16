@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Search, ArrowRight, Building2, Map } from 'lucide-react';
 
 const states = [
-  'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 
-  'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 
-  'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 
-  'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 
+  'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
+  'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
+  'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram',
+  'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu',
   'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'
 ];
 
@@ -51,7 +51,7 @@ export function ContactUs() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const dataToSubmit = {
         Name: formData.name || '',
@@ -71,7 +71,7 @@ export function ContactUs() {
         },
         body: JSON.stringify(dataToSubmit)
       });
-      
+
       alert('Thank you! Your message has been sent successfully.');
       setFormData({ name: '', email: '', phone: '', organisation: '', subject: '', message: '' });
     } catch (error) {
@@ -114,15 +114,15 @@ export function ContactUs() {
       <section className="py-16 sm:py-24 relative z-20 -mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16">
-            
+
             {/* Contact Form Details */}
             <div className="lg:col-span-3">
               <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/50 relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-green-50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2 opacity-50"></div>
-                
+
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
                 <p className="text-gray-500 mb-8">Fill out the form below and we'll be in touch shortly.</p>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -190,11 +190,11 @@ export function ContactUs() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">Address</h4>
                       <p className="text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors">
-                        Kondapur<br/>Hyderabad, Telangana<br/>India
+                        Kondapur<br />Hyderabad, Telangana<br />India
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="group flex gap-5">
                     <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center flex-shrink-0 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                       <Phone className="w-5 h-5" />
@@ -219,129 +219,23 @@ export function ContactUs() {
 
               {/* Map Placeholder */}
               <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] relative flex-grow group cursor-pointer min-h-[300px]">
-                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700"></div>
-                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-blue-900/40 to-transparent mix-blend-multiply"></div>
-                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none p-6 text-center">
-                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 ring-1 ring-white/50 shadow-2xl">
-                      <Map className="w-8 h-8" />
-                    </div>
-                    <h3 className="font-bold text-lg drop-shadow-md">View Interactive Map</h3>
-                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Premium Distributor Search */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">Locate a Distributor</h2>
-              <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-                Find authorized Civiltech distributors near you. Our nationwide network ensures prompt delivery and technical support anywhere in India.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgb(0,0,0,0.05)] border border-gray-100 p-8 sm:p-12 relative overflow-hidden">
-               <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-blue-600 to-green-500"></div>
-               <form onSubmit={handleDistributorSearch} className="grid md:grid-cols-12 gap-6 items-end relative z-10">
-                <div className="md:col-span-5 space-y-2">
-                  <label htmlFor="state" className="text-xs font-bold text-gray-500 uppercase tracking-widest">State / Region</label>
-                  <select id="state" value={selectedState} onChange={handleStateChange} required
-                    className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium appearance-none cursor-pointer">
-                    <option value="">Select State</option>
-                    {states.map((state) => (
-                      <option key={state} value={state}>{state}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="md:col-span-4 space-y-2">
-                  <label htmlFor="city" className="text-xs font-bold text-gray-500 uppercase tracking-widest">City</label>
-                  <select id="city" value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} required disabled={!selectedState}
-                    className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium appearance-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer">
-                    <option value="">{selectedState ? 'Select City' : 'Choose State First'}</option>
-                    {selectedState && citiesByState[selectedState]?.map((city) => (
-                      <option key={city} value={city}>{city}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="md:col-span-3">
-                  <button type="submit"
-                    className="w-full bg-slate-900 hover:bg-slate-800 text-white h-[56px] rounded-xl transition-colors flex items-center justify-center gap-2 font-bold group shadow-lg shadow-slate-900/20">
-                    <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    Search
-                  </button>
-                </div>
-              </form>
-
-              {/* Results */}
-              {selectedState && selectedCity && (
-                <div className="mt-12 pt-12 border-t border-gray-100 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
-                      <MapPin className="w-4 h-4" />
-                    </span>
-                    Distributors in {selectedCity}, {selectedState}
-                  </h3>
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    {[1, 2, 3].map((item) => (
-                      <div key={item} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-blue-300 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/0 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
-                        <h4 className="text-lg font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors relative z-10">Premium Builder Supply {item}</h4>
-                        <div className="space-y-3 text-sm relative z-10">
-                          <div className="flex items-start gap-3 text-gray-600">
-                            <MapPin className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                            <span>123 Industrial Area Phase {item},<br/>{selectedCity}, {selectedState}</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-gray-600">
-                            <Phone className="w-4 h-4 text-green-500 flex-shrink-0" />
-                            <span>+91 98765 43210</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-gray-600">
-                            <Mail className="w-4 h-4 text-slate-400 flex-shrink-0" />
-                            <span>contact@pbs{item}.com</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-blue-900/40 to-transparent mix-blend-multiply"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none p-6 text-center">
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 ring-1 ring-white/50 shadow-2xl">
+                    <Map className="w-8 h-8" />
                   </div>
+                  <h3 className="font-bold text-lg drop-shadow-md">View Interactive Map</h3>
                 </div>
-              )}
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Online Brochures CTA */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-slate-900">
-               <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-500/20 to-transparent"></div>
-               <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
-            </div>
-            
-            <div className="relative p-12 sm:p-20 flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="text-center md:text-left max-w-2xl">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Complete Product Catalog</h2>
-                <p className="text-blue-100 text-lg leading-relaxed">
-                  Explore our comprehensive range of high-performance construction chemicals. Download technical data sheets and detailed brochures instantly.
-                </p>
-              </div>
-              <button className="flex-shrink-0 bg-white hover:bg-gray-50 text-slate-900 px-8 py-4 rounded-xl transition-all duration-300 inline-flex items-center gap-3 font-bold group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transform hover:scale-105">
-                View Brochures
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
     </div>
   );
 }

@@ -88,7 +88,7 @@ export function Header() {
     {
       label: 'Who We Are',
       hasDropdown: true,
-      items: ['About Us', 'Expert Hub', 'CSR']
+      items: ['About Us', 'CSR']
     },
     {
       label: 'What We Do',
@@ -101,7 +101,6 @@ export function Header() {
       hasDropdown: true,
       items: ['Lok fix', 'Tools']
     },
-    { label: 'Case Studies' },
     { label: 'Contact' }
   ];
 

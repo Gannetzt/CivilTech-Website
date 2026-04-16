@@ -5,8 +5,6 @@ import logo from '../../assets/59663358e291026026b733e05a456c1f287e3e58.png';
 const footerLinks = {
   company: [
     { name: 'About Us', path: '/about-us' },
-    { name: 'Expert Hub', path: '/expert-hub' },
-    { name: 'Case Studies', path: '/case-studies' },
     { name: 'Contact', path: '/contact' }
   ],
   products: [

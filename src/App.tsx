@@ -6,12 +6,11 @@ import { SolutionsPage } from './pages/SolutionsPage';
 import { SectorsPage } from './pages/SectorsPage';
 import { LokfixPage } from './pages/LokfixPage';
 import { ToolsPage } from './pages/ToolsPage';
-import { CaseStudiesPage } from './pages/CaseStudiesPage';
-import { ExpertHubPage } from './pages/ExpertHubPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { ContactUsPage } from './pages/ContactUsPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
+import { SectorDetailPage } from './pages/SectorDetailPage';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 export default function App() {
@@ -23,14 +22,13 @@ export default function App() {
         <main className="w-full overflow-clip">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/solutions" element={<SolutionsPage />} />
+             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/sectors" element={<SectorsPage />} />
+            <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:productId" element={<ProductDetailPage />} />
             <Route path="/lokfix" element={<LokfixPage />} />
             <Route path="/tools" element={<ToolsPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/expert-hub" element={<ExpertHubPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactUsPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />

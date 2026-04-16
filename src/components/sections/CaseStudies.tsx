@@ -2,78 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const caseStudies = [
-  {
-    title: 'Adani Shantigram',
-    location: 'India',
-    description: 'Adani Group is an $8.7 billion (2013), 10,000+ employee, diversified conglomerate with interests in ports, real estate, special economic zones, power generation, and oil and gas exploration and distribution.',
-    image: 'https://images.unsplash.com/photo-1667375887091-2237f31fa92b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByZXNpZGVudGlhbCUyMGJ1aWxkaW5nJTIwSW5kaWF8ZW58MXx8fHwxNzY1ODgyMjk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Buildings',
-    solution: 'Waterproofing'
-  },
-  {
-    title: 'Air Force Academy',
-    location: 'India',
-    description: 'Air Force Hangars with Fosroc static dissipative flooring system.',
-    image: 'https://images.unsplash.com/photo-1571406172996-99dcf29b2f7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaXJjcmFmdCUyMGhhbmdhciUyMGZsb29yfGVufDF8fHx8MTc2NTg4MjI5NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Defence',
-    solution: 'Industrial Flooring'
-  },
-  {
-    title: 'Almatti Dam',
-    location: 'India',
-    description: 'The project involved Almatti Dam repair work to increase the height of the dam and increase the water storage capacity, as well as to stop the water seepage from the body of the dam and make the body of the dam leakage proof.',
-    image: 'https://images.unsplash.com/photo-1541008022357-e6195d1af8cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMGRhbSUyMHN0cnVjdHVyZXxlbnwxfHx8fDE3NjU4ODIyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Dam',
-    solution: 'Concrete Repair'
-  },
-  {
-    title: 'Amazon IT Park',
-    location: 'India',
-    description: 'Amazon IT Park were looking for a durable and aesthetically pleasing car park deck coating system for their IT Park basement floor parking garage.',
-    image: 'https://images.unsplash.com/photo-1649886962584-f8c88b3bf918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXJraW5nJTIwZ2FyYWdlJTIwYmFzZW1lbnR8ZW58MXx8fHwxNzY1ODgyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Industrial',
-    solution: 'Protective Coatings'
-  },
-  {
-    title: 'Aparna Zenith',
-    location: 'India',
-    description: 'Aparna Zenith Located in close proximity to the IT hub / financial district in Hyderabad at Gachibowli, Nallagandla,. It is a gated community of high end residential apartments.',
-    image: 'https://images.unsplash.com/photo-1621919200669-2779566a6eaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjU4NDY0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Buildings',
-    solution: 'Waterproofing'
-  },
-  {
-    title: 'Aurobindo Galaxy',
-    location: 'India',
-    description: 'Aurobindo Galaxy, a magnificent 25 storied commercial building, 105 metres tall has a beautiful structural glass façade, with a fresh looking design. Galaxy is the tallest commercial office tower in Hyderabad, India is built with precast technology.',
-    image: 'https://images.unsplash.com/photo-1651331189285-64ef5906d6f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0b3dlcnxlbnwxfHx8fDE3NjU4Mjc4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Buildings',
-    solution: 'Concrete Admixtures'
-  },
-  {
-    title: 'Ayanna IT Park',
-    location: 'India',
-    description: 'Ayanna IT Park is located in Kondapur, Hyderabad and offers 450.000 sq. ft. of commercial space.',
-    image: 'https://images.unsplash.com/photo-1722718902732-e45eac8d3d56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwSVQlMjBwYXJrfGVufDF8fHx8MTc2NTg4MjI5Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Buildings',
-    solution: 'Industrial Flooring'
-  },
-  {
-    title: 'Bangalore Metro Station Building',
-    location: 'India',
-    description: 'The Bangalore Metro Rail Project – Phase 2 involves the construction of an underground structure, approx. 2.8 km in length, from Shivajinagar Station to Tannery Road Station.',
-    image: 'https://images.unsplash.com/photo-1665809544649-c389c3209976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHN0YXRpb24lMjB1bmRlcmdyb3VuZHxlbnwxfHx8fDE3NjU4ODIyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Rail',
-    solution: 'Waterproofing'
-  },
-  {
-    title: 'Bekaert Industries',
-    location: 'India',
-    description: 'Bekaert is a steel wire manufacturing company located at Pune. They were looking for a tough and durable floor in their warehousing area that can withstand continuous trolley movement, impact and abrasion.',
-    image: 'https://images.unsplash.com/photo-1761034278174-bf8d69530182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlJTIwZmxvb3J8ZW58MXx8fHwxNzY1ODgyMjk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    sector: 'Industrial',
-    solution: 'Industrial Flooring'
-  },
+
   {
     title: 'Inorbit Mall',
     location: 'Hyderabad',
