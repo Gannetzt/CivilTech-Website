@@ -146,7 +146,7 @@ export function Sectors() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl mb-4 relative z-10 font-bold">Online Brochures</h2>
           <p className="text-blue-50 text-base sm:text-lg mb-8 max-w-2xl mx-auto relative z-10 opacity-90 leading-relaxed">
-            Delivering exceptional products worldwide. Download our latest technical guides and product catalogs.
+            Delivering exceptional products across India. Download our latest technical guides and product catalogs.
           </p>
           <button
             onClick={() => window.open('/assets/Brochures/Civil Tech Catalogue.pdf', '_blank')}
