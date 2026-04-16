@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { projectsData } from '../../data/projects';
 
 import p2 from '../../assets/clients/Picture2.jpg';
 import p3 from '../../assets/clients/Picture3.png';
@@ -32,58 +33,6 @@ import p26 from '../../assets/clients/Picture26.png';
 import p27 from '../../assets/clients/Picture27.jpg';
 import p28 from '../../assets/clients/Picture28.jpg';
 import p29 from '../../assets/clients/Picture29.png';
-import maritimeTerminal from '../../assets/projects/maritime_terminal.png';
-
-const projects = [
-  {
-    title: "Inorbit Mall",
-    location: "Hyderabad",
-    category: "Waterproofing",
-    description: "Waterproofing and protective coating solutions to ensure structural integrity and long-term protection against environmental factors.",
-    image: "/assets/casestudies/inorbit-mall-hyderabad.jpg"
-  },
-  {
-    title: "The Sirpur Paper Mills Limited",
-    location: "Kaghaznagar, Telangana",
-    category: "Industrial Flooring",
-    description: "Self-leveling epoxy flooring system for a 200,000 sq.ft. clean-room manufacturing facility.",
-    image: "/assets/casestudies/Sirpur Paper mill work.jpeg",
-    video: "/assets/casestudies/Sirpur Paper mill work video.mp4",
-    image2: "/assets/casestudies/Sirpur Paper mill work 2.jpeg",
-    image3: "/assets/casestudies/Sirpur Paper mill work 3.jpeg"
-  },
-  {
-    title: "L&T Metro",
-    location: "Nampally and Moosarambagh stations",
-    category: "Concrete Curing Compounds",
-    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
-    image: "/assets/casestudies/L&T metro.jpeg"
-  },
-  {
-    title: "AP Capital region development authority (APCRDA)",
-    location: "Amaravati",
-    category: "RockFix GP Block Jointing mortar",
-    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
-    image: "/assets/casestudies/AP project.jpeg",
-    video: "/assets/casestudies/Jointing mortar.mp4"
-  },
-  {
-    title: " Aparna sarovar ",
-    location: "Hyderabad",
-    category: "FloorTop SL ,",
-    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
-    image: "/assets/casestudies/Aparna sarovar.jpeg",
-    image2: "/assets/casestudies/Aparna sarovar 2.jpeg",
-    video: "/assets/casestudies/Aparna sarovar.mp4"
-  },
-  {
-    title: "Grand Plaza Infrastructure",
-    location: "Dubai",
-    category: "Concrete Aids",
-    description: "High-performance curing compounds used in extreme temperature structural concrete applications.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
-  }
-];
 
 const clients = [
   { name: "Client 12", logo: p12 },
@@ -186,11 +135,11 @@ export function ProjectsCarousel() {
   }, [location.key]);
 
   const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % projects.length);
+    setCurrentIndex((prev) => (prev + 1) % projectsData.length);
   };
 
   const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentIndex((prev) => (prev - 1 + projectsData.length) % projectsData.length);
   };
 
   const goToSlide = (index: number) => setCurrentIndex(index);
@@ -226,14 +175,11 @@ export function ProjectsCarousel() {
               </div>
             ))}
           </div>
-
-
-
         </div>
 
         <div className="relative group/carousel">
           <div className="relative aspect-[4/5] sm:aspect-video min-h-[500px] max-h-[850px] rounded-[2.5rem] sm:rounded-[4rem] overflow-hidden shadow-2xl bg-primary border border-white/5">
-            {projects.map((project, index) => (
+            {projectsData.map((project, index) => (
               <div
                 key={`${project.title}-${index}`}
                 className={`absolute inset-0 transition-all duration-[1000ms] ${index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
@@ -262,10 +208,10 @@ export function ProjectsCarousel() {
 
                     <div className="pt-2 sm:pt-4">
                       <button
-                        onClick={() => navigate('/case-studies')}
+                        onClick={() => navigate(`/projects/${project.id}`)}
                         className="group/btn inline-flex items-center gap-3 sm:gap-6 px-5 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl sm:rounded-2xl text-white text-[9px] sm:text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-primary hover:border-white"
                       >
-                        <span>View Case Study</span>
+                        <span>View Project Details</span>
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 group-hover/btn:translate-x-3" />
                       </button>
                     </div>
@@ -291,7 +237,7 @@ export function ProjectsCarousel() {
           </div>
 
           <div className="flex justify-center items-center gap-4 mt-12">
-            {projects.map((_, index) => (
+            {projectsData.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}

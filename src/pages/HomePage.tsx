@@ -4,6 +4,7 @@ import { About } from '../components/sections/About';
 import { ProductsPreview } from '../components/sections/ProductsPreview';
 import { TechnicalResources } from '../components/sections/TechnicalResources';
 import { Stakeholders } from '../components/sections/Stakeholders';
+import { ProjectsCarousel } from '../components/sections/ProjectsCarousel';
 import { SEO } from '../components/seo/SEO';
 
 export function HomePage() {
@@ -21,6 +22,8 @@ export function HomePage() {
       
       {/* Core Competencies comes second */}
       <FeaturedServices />
+      
+      <ProjectsCarousel />
       
       {/* Stakeholders section moved down and separated */}
       <Stakeholders />

@@ -11,6 +11,8 @@ import { ContactUsPage } from './pages/ContactUsPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
 import { SectorDetailPage } from './pages/SectorDetailPage';
+import { ProjectDetailPage } from './pages/ProjectDetailPage';
+import { ProjectsPage } from './pages/ProjectsPage';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 export default function App() {
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:productId" element={<ProductDetailPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
             <Route path="/lokfix" element={<LokfixPage />} />
             <Route path="/tools" element={<ToolsPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />

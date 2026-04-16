@@ -67,17 +67,8 @@ export function Header() {
       navigate('/contact');
       setIsMenuOpen(false);
       setActiveDropdown(null);
-    } else if (item === 'Technical Resources') {
-      if (location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => {
-          const element = document.getElementById('resources');
-          if (element) element.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-      } else {
-        const element = document.getElementById('resources');
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }
+    } else if (item === 'Projects') {
+      navigate('/projects');
       setIsMenuOpen(false);
       setActiveDropdown(null);
     } else {
@@ -105,7 +96,7 @@ export function Header() {
       hasDropdown: true,
       items: ['Lok fix', 'Tools']
     },
-    { label: 'Technical Resources' },
+    { label: 'Projects' },
     { label: 'About Us' },
     { label: 'Contact' }
   ];
