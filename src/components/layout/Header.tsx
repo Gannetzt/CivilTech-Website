@@ -67,10 +67,6 @@ export function Header() {
       navigate('/contact');
       setIsMenuOpen(false);
       setActiveDropdown(null);
-    } else if (item === 'CSR') {
-      navigate('/about-us'); // Fallback or dedicated page
-      setIsMenuOpen(false);
-      setActiveDropdown(null);
     } else {
       navigate('/');
       setTimeout(() => {
@@ -86,11 +82,6 @@ export function Header() {
 
   const navItems = [
     {
-      label: 'Who We Are',
-      hasDropdown: true,
-      items: ['About Us', 'CSR']
-    },
-    {
       label: 'What We Do',
       hasDropdown: true,
       items: ['Solutions', 'Sectors']
@@ -101,6 +92,7 @@ export function Header() {
       hasDropdown: true,
       items: ['Lok fix', 'Tools']
     },
+    { label: 'About Us' },
     { label: 'Contact' }
   ];
 

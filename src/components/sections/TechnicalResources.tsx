@@ -17,7 +17,7 @@ const categories: ResourceCategory[] = [
     id: 'datasheets',
     title: 'Product Datasheets',
     description: 'Comprehensive technical specifications, brochures and performance data for all product lines.',
-    count: '6 Documents',
+    count: '5 Documents',
     icon: FileCheck,
     color: 'text-blue-600',
     bgIcon: 'bg-blue-50'
@@ -27,11 +27,10 @@ const categories: ResourceCategory[] = [
 const mockDocuments = {
   datasheets: [
     { id: '1', name: 'Civil Tech Full Catalogue', size: '7.2 MB', version: '2025', date: 'Oct 2025', path: '/assets/Brochures/Civil Tech Catalogue.pdf' },
-    { id: '2', name: 'Poly Bond 2K TDS', size: '3.4 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
-    { id: '3', name: 'Trujoint Flexitape TDS', size: '2.8 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
+    { id: '2', name: 'Galaxy MEP TDS', size: '3.4 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
+    { id: '3', name: 'Galaxy Flexi Tape', size: '2.8 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
     { id: '4', name: 'Civiltech Report', size: '80 KB', version: '1.0', date: 'Dec 2025', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
-    { id: '5', name: 'Product Brochure 1', size: '1.7 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Document 8.pdf' },
-    { id: '6', name: 'Product Brochure 2', size: '11.3 MB', version: '1.0', date: 'Sep 2025', path: '/assets/Brochures/DOC-20250902-WA0017..pdf' },
+    { id: '5', name: 'TECHNICAL DATA SHEET', size: '1.7 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Document 8.pdf' },
   ],
   guides: [
     { id: '1', name: 'Surface Preparation Guide', size: '4.2 MB', version: 'v5.0', date: 'Jan 2026', path: '#' },
