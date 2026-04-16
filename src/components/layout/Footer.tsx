@@ -21,7 +21,7 @@ const footerLinks = {
   ],
   support: [
     { name: 'Technical Support', path: '/contact' },
-    { name: 'Documentation', path: '/contact' },
+    { name: 'Documentation', path: '/#resources' },
     { name: 'LokFix', path: '/lokfix' },
     { name: 'Tools', path: '/tools' }
   ]
@@ -152,8 +152,8 @@ export function Footer() {
             © {currentYear} Civiltech Construction Chemicals LLP. All rights reserved.
           </p>
           <div className="flex gap-8 uppercase tracking-[0.2em]">
-            <Link to="/about-us" className="text-blue-100/30 hover:text-green-400 transition-colors">Privacy Policy</Link>
-            <Link to="/about-us" className="text-blue-100/30 hover:text-green-400 transition-colors">Terms of Service</Link>
+            <Link to="/" className="text-blue-100/30 hover:text-green-400 transition-colors">Privacy Policy</Link>
+            <Link to="/" className="text-blue-100/30 hover:text-green-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

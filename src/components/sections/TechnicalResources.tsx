@@ -26,11 +26,11 @@ const categories: ResourceCategory[] = [
 
 const mockDocuments = {
   datasheets: [
-    { id: '1', name: 'Civil Tech Full Catalogue', size: '7.2 MB', version: '2025', date: 'Oct 2025', path: '/assets/Brochures/Civil Tech Catalogue.pdf' },
-    { id: '2', name: 'Galaxy MEP TDS', size: '3.4 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
-    { id: '3', name: 'Galaxy Flexi Tape', size: '2.8 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
-    { id: '4', name: 'Civiltech Report', size: '80 KB', version: '1.0', date: 'Dec 2025', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
-    { id: '5', name: 'TECHNICAL DATA SHEET', size: '1.7 MB', version: '1.0', date: 'Oct 2025', path: '/assets/Brochures/Document 8.pdf' },
+    { id: '1', name: 'Civil Tech Full Catalogue', size: '7.2 MB', version: '2025', date: 'Apr 2026', path: '/assets/Brochures/Civil Tech Catalogue.pdf' },
+    { id: '2', name: 'Galaxy MEP TDS', size: '3.4 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
+    { id: '3', name: 'Galaxy Flexi Tape', size: '2.8 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
+    { id: '4', name: 'Civiltech Report', size: '80 KB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
+    { id: '5', name: 'TECHNICAL DATA SHEET', size: '1.7 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Document 8.pdf' },
   ],
   guides: [
     { id: '1', name: 'Surface Preparation Guide', size: '4.2 MB', version: 'v5.0', date: 'Jan 2026', path: '#' },

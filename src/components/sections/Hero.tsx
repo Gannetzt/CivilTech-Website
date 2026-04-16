@@ -141,13 +141,13 @@ export function Hero() {
       <div className="py-24 border-b border-border">
         <div className="text-center mb-10 sm:mb-12 px-4 relative z-20">
           <div className="inline-block px-3 py-1 bg-blue-500/5 text-blue-700 dark:text-blue-400 rounded-lg text-[9px] sm:text-xs font-bold tracking-[0.2em] uppercase mb-4 border border-blue-500/10 backdrop-blur-sm">
-            Global Construction Chemicals Leader
+            Civiltech Construction Chemicals LLP
           </div>
           <h1 className="text-foreground text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4 leading-tight max-w-4xl mx-auto px-2">
             Precision Solutions for <span className="text-primary">Structural Excellence</span>
           </h1>
           <p className="text-muted-foreground text-xs sm:text-base lg:text-lg max-w-xl mx-auto leading-relaxed opacity-70 px-4 font-medium">
-            High-performance manufacturing standards and technical expertise for the global construction industry.
+            High-performance manufacturing standards and technical expertise for the Indian construction industry.
           </p>
         </div>
 
@@ -171,7 +171,7 @@ export function Hero() {
                     >
                       <img 
                         src={card.image} 
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                         alt={card.title}
                       />
                       <LogoBadge size="sm" className="top-6 left-6" />

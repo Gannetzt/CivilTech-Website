@@ -7,45 +7,53 @@ import concreteImage from '../../assets/products/concrete_category_banner.png';
 import flooringImage from '../../assets/products/flooring_category_banner.jpeg';
 import waterproofingExplanatory from '../../assets/products/waterproofing_explanatory.png';
 import { LogoBadge } from '../ui/LogoBadge';
+import { productsData } from '../../data/products';
 
 const sealantsExplanatory = 'https://images.unsplash.com/photo-1730267961291-8ba275f8c556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBqb2ludCUyMHNlYWxhbnQlMjBzaWxpY29uZXxlbnwxfHx8fDE3NzM2NjAxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
 const tilingExplanatory = 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlJTIwaW5zdGFsbGF0aW9uJTIwYWRoZXNpdmV8ZW58MXx8fHwxNzczNjYwMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral';
 
-const categories = [
+const baseCategories = [
   {
     id: 'waterproofing',
     title: 'Waterproofing Coatings',
-    count: 7,
     image: waterproofingImage
   },
   {
     id: 'sealants',
     title: 'Expansion Joints / Sealants',
-    count: 7,
     image: sealantsImage
   },
   {
     id: 'concrete',
     title: 'Concrete Aids',
-    count: 6,
     image: concreteImage
   },
   {
     id: 'flooring',
     title: 'Protection Compounds / Flooring Products',
-    count: 6,
     image: flooringImage
   },
   {
     id: 'tiling',
     title: 'Tiling, Adhesives & Repairing Compounds',
-    count: 11,
     image: tilingImage
   }
 ];
 
 export function ProductsPreview() {
   const navigate = useNavigate();
+
+  const categoryCounts = productsData.reduce((acc, product) => {
+    if (!product.hidden) {
+      acc[product.category] = (acc[product.category] || 0) + 1;
+    }
+    return acc;
+  }, {} as Record<string, number>);
+
+  const categories = baseCategories.map(cat => ({
+    ...cat,
+    count: categoryCounts[cat.id] || 0
+  }));
 
   const handleCategoryClick = (categoryId: string) => {
     navigate(`/products?category=${categoryId}`);

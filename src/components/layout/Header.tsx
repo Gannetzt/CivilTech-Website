@@ -67,6 +67,19 @@ export function Header() {
       navigate('/contact');
       setIsMenuOpen(false);
       setActiveDropdown(null);
+    } else if (item === 'Technical Resources') {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById('resources');
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      } else {
+        const element = document.getElementById('resources');
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsMenuOpen(false);
+      setActiveDropdown(null);
     } else {
       navigate('/');
       setTimeout(() => {
@@ -92,6 +105,7 @@ export function Header() {
       hasDropdown: true,
       items: ['Lok fix', 'Tools']
     },
+    { label: 'Technical Resources' },
     { label: 'About Us' },
     { label: 'Contact' }
   ];
@@ -99,7 +113,7 @@ export function Header() {
   return (
     <header className="bg-background border-b border-border shadow-sm sticky top-0 z-50">
       {/* Top Contact Bar */}
-      <div className="bg-background border-b border-border hidden sm:block">
+      <div className="bg-background border-b border-border hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-1.5 text-[10px] font-bold tracking-widest uppercase text-gray-400">
             <div className="flex items-center gap-6">
