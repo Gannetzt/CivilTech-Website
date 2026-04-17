@@ -43,6 +43,10 @@ export function Header() {
       navigate('/products');
       setIsMenuOpen(false);
       setActiveDropdown(null);
+    } else if (item === 'Technical Resources') {
+      navigate('/technical-resources');
+      setIsMenuOpen(false);
+      setActiveDropdown(null);
     } else if (item === 'Lokfix' || item === 'Lok fix') {
       navigate('/lokfix');
       setIsMenuOpen(false);
@@ -93,7 +97,7 @@ export function Header() {
     {
       label: 'Featured',
       hasDropdown: true,
-      items: ['Lok fix', 'Tools']
+      items: ['Lok fix', 'Tools', 'Technical Resources']
     },
     { label: 'Products' },
     { label: 'Projects' },

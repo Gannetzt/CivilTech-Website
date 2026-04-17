@@ -14,14 +14,14 @@ const footerLinks = {
     { name: 'Sealants', path: '/products?category=sealants' }
   ],
   sectors: [
-    { name: 'Residential', path: '/sectors' },
-    { name: 'Commercial', path: '/sectors' },
-    { name: 'Infrastructure', path: '/sectors' },
-    { name: 'Industrial', path: '/sectors' }
+    { name: 'Residential', path: '/sectors/buildings' },
+    { name: 'Commercial', path: '/sectors/buildings' },
+    { name: 'Infrastructure', path: '/sectors/roads-and-bridges' },
+    { name: 'Industrial', path: '/sectors/industrial' }
   ],
   support: [
     { name: 'Technical Support', path: '/contact' },
-    { name: 'Documentation', path: '/#resources' },
+    { name: 'Documentation', path: '/technical-resources' },
     { name: 'LokFix', path: '/lokfix' },
     { name: 'Tools', path: '/tools' }
   ]

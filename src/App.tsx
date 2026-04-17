@@ -15,6 +15,7 @@ import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { ExpertHubPage } from './pages/ExpertHubPage';
+import { TechnicalResourcesPage } from './pages/TechnicalResourcesPage';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 // Admin Imports
@@ -66,6 +67,7 @@ export default function App() {
                     <Route path="/contact" element={<ContactUsPage />} />
                     <Route path="/case-studies" element={<CaseStudiesPage />} />
                     <Route path="/expert-hub" element={<ExpertHubPage />} />
+                    <Route path="/technical-resources" element={<TechnicalResourcesPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                   </Routes>
                 </main>
