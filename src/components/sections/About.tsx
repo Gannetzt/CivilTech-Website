@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import { Award, Users, Globe, TrendingUp } from 'lucide-react';
 
 const milestones = [
@@ -40,7 +41,10 @@ export function About() {
               </p>
               
               <div className="pt-8">
-                <button className="bg-blue-900 hover:bg-green-600 text-white px-10 py-4 rounded-2xl transition-all duration-300 font-bold shadow-xl shadow-blue-950/20">
+                <button 
+                  onClick={() => navigate('/about-us')}
+                  className="bg-blue-900 hover:bg-green-600 text-white px-10 py-4 rounded-2xl transition-all duration-300 font-bold shadow-xl shadow-blue-950/20"
+                >
                   Our Legacy
                 </button>
               </div>

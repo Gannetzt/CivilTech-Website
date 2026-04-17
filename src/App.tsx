@@ -13,6 +13,8 @@ import { ProductDetailPage } from './pages/ProductDetailPage';
 import { SectorDetailPage } from './pages/SectorDetailPage';
 import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { ExpertHubPage } from './pages/ExpertHubPage';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 
 // Admin Imports
@@ -62,6 +64,8 @@ export default function App() {
                     <Route path="/tools" element={<ToolsPage />} />
                     <Route path="/about-us" element={<AboutUsPage />} />
                     <Route path="/contact" element={<ContactUsPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/expert-hub" element={<ExpertHubPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                   </Routes>
                 </main>

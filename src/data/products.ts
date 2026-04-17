@@ -54,7 +54,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '4-6 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Complexes',
@@ -97,7 +96,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '30-45 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Poly-Bond 2K Document.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Projects',
@@ -140,7 +139,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Elongation', value: 'Up to 200%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'High-rise Buildings',
       'Seismic Zones',
@@ -183,7 +181,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Elongation', value: 'Up to 400%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Roofing Systems',
       'Metal Structures',
@@ -226,7 +223,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Heat Reduction', value: 'Up to 40%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Polybond Flexicoat.pdf',
     applications: [
       'Industrial Roofs',
       'Commercial Buildings',
@@ -269,7 +266,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>40 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Basements',
       'Water Tanks',
@@ -312,7 +308,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Specific Gravity', value: '1.25 ± 0.05' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Tunneling',
       'Mining',
@@ -357,7 +352,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Movement Capability', value: '±25%' },
       { label: 'Temperature Range', value: '-40°C to +80°C' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Galaxy Flexi Tape Document.pdf',
     applications: [
       'Building Construction',
       'Infrastructure Projects',
@@ -400,7 +395,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compression', value: 'Up to 50%' },
       { label: 'Temperature Range', value: '-30°C to +70°C' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Pavements',
       'Industrial Flooring',
@@ -443,7 +437,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Galaxy MEP.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Maintenance',
@@ -486,7 +480,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Shore A Hardness', value: '25-35' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Commercial Buildings',
       'Infrastructure Projects',
@@ -529,7 +522,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Curing Time', value: '7-14 days' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Airport Infrastructure',
       'Highway Construction',
@@ -572,7 +564,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Tack Free Time', value: '2-4 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Construction',
       'Commercial Buildings',
@@ -617,7 +608,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Application', value: 'Spray/Brush' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Ready Mix Concrete',
       'Precast Industry',
@@ -660,7 +650,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Retention', value: '>90%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Commercial Flooring',
       'Industrial Slabs',
@@ -703,7 +692,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Retention', value: '>95%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Decorative Concrete',
       'Architectural Projects',
@@ -746,7 +734,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Penetration', value: '5-10mm' },
       { label: 'Shelf Life', value: '24 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Flooring',
       'Commercial Projects',
@@ -789,7 +776,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>0.5 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Basement Waterproofing',
       'Tunnel Construction',
@@ -831,7 +817,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Setting Time', value: '1-5 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Mining Operations',
       'Subway Tunnels',
@@ -876,7 +861,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>80 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Facilities',
       'Manufacturing Units',
@@ -919,7 +903,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '6 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Light to Medium Traffic Areas',
       'Commercial Flooring',
@@ -962,7 +945,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>80 MPa' },
       { label: 'Shelf Life', value: '6 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Heavy Industrial Floors',
       'Logistics Facilities',
@@ -1005,7 +987,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Food Grade', value: 'FDA Approved' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Water Treatment Plants',
       'Food & Beverage Industry',
@@ -1048,7 +1029,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>60 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Floor Leveling',
       'Industrial Facilities',
@@ -1091,7 +1071,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '2-4 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Building Facades',
       'Decorative Surfaces',
@@ -1136,7 +1115,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>30 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Tiling',
       'Commercial Projects',
@@ -1180,7 +1158,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Water Absorption', value: '<5%' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Hotels and Restaurants',
@@ -1224,7 +1201,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Chemical Resistance', value: 'Excellent' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Food Industry',
       'Pharmaceutical Industry',
@@ -1267,7 +1243,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '30-40 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Bonding',
@@ -1311,7 +1286,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>70 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Galaxy MEP.pdf',
     applications: [
       'Concrete Repairs',
       'Industrial Maintenance',
@@ -1354,7 +1329,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Pot Life', value: '45-60 minutes' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Bridge Construction',
       'Precast Structures',
@@ -1398,7 +1372,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Drying Time', value: '4-6 hours' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Buildings',
       'Commercial Projects',
@@ -1442,7 +1415,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Bond Strength', value: '>25 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Industrial Anchoring',
       'Infrastructure Projects',
@@ -1486,7 +1458,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Fragrance', value: 'Lemon' },
       { label: 'Shelf Life', value: '24 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential Cleaning',
       'Commercial Spaces',
@@ -1529,7 +1500,6 @@ export const productsData: ProductDetail[] = [
       { label: 'Bond Strength', value: '>0.5 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
     applications: [
       'Residential High-rises',
       'Commercial Buildings',
@@ -1566,7 +1536,7 @@ export const productsData: ProductDetail[] = [
       { label: 'Base', value: 'Cementitious' },
       { label: 'Color', value: 'Grey' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Rockfix GP.pdf',
     applications: [
       'Residential',
       'Commercial',
@@ -1607,12 +1577,97 @@ export const productsData: ProductDetail[] = [
       { label: 'Compressive Strength', value: '>55 MPa' },
       { label: 'Shelf Life', value: '12 months' }
     ],
-    tdsUrl: '/src/assets/documents/sample-tds.pdf',
+    tdsUrl: '/assets/Brochures/Rockfix GP.pdf',
     applications: [
       'Bridges and Dams',
       'Industrial Structures',
       'Infrastructure Repairs',
       'General Construction'
+    ]
+  }
+,
+  {
+    id: 'w8',
+    name: 'PolyBond SBR',
+    category: 'waterproofing',
+    categoryName: 'Waterproofing Coatings',
+    description: 'SBR Latex Based Additive for Waterproofing and Repair',
+    image: new URL('../assets/products/POlybond SBR.jpg', import.meta.url).href,
+    features: [
+      'Single component SBR latex based additive',
+      'Excellent water resistance and bonding',
+      'Improves tensile and flexural strength',
+      'Reduces permeability and dusting',
+      'Easy to mix with cement'
+    ],
+    usage: [
+      'Bonding agent for new to old concrete',
+      'Waterproof slurry for toilets and terraces',
+      'Repairing of spalled concrete',
+      'General concrete repair mortar',
+      'Anti-corrosion coating for reinforcement'
+    ],
+    advantages: [
+      'High bonding strength',
+      'Cost-effective waterproofing solution',
+      'Improves durability of repairs',
+      'Can be applied on damp surfaces',
+      'Non-toxic and safe'
+    ],
+    specifications: [
+      { label: 'Base', value: 'SBR Latex' },
+      { label: 'Color', value: 'Milky White' },
+      { label: 'Specific Gravity', value: '1.02 ± 0.02' },
+      { label: 'Shelf Life', value: '12 months' }
+    ],
+    tdsUrl: '/assets/Brochures/POlybond SBR.pdf',
+    applications: [
+      'Residential Projects',
+      'Industrial Repairs',
+      'Water Tanks',
+      'Concrete Structures'
+    ]
+  },
+  {
+    id: 's8',
+    name: 'Trujoint Flexitape',
+    category: 'sealants',
+    categoryName: 'Expansion Joints / Sealants',
+    description: 'High Performance Joint Sealing Tape System',
+    image: new URL('../assets/products/Trujoint Flexitape TDS.pdf', import.meta.url).href,
+    features: [
+      'Advanced flexible joint sealing system',
+      'High movement capability',
+      'Excellent chemical and UV resistance',
+      'Forms a seamless waterproof seal',
+      'Compatible with most substrates'
+    ],
+    usage: [
+      'Expansion joints in buildings',
+      'Movement joints in swimming pools',
+      'Tunnel and basement joints',
+      'Facade joints',
+      'Bridge and road joints'
+    ],
+    advantages: [
+      'Superior flexibility and durability',
+      'Easy and rapid installation',
+      'Accommodates three-dimensional movement',
+      'Provides permanent watertight seal',
+      'Economical joint sealing solution'
+    ],
+    specifications: [
+      { label: 'Material', value: 'Specialized Polymer' },
+      { label: 'Color', value: 'Grey' },
+      { label: 'Movement Ratio', value: 'High' },
+      { label: 'Shelf Life', value: '24 months' }
+    ],
+    tdsUrl: '/assets/Brochures/Trujoint Flexitape TDS.pdf',
+    applications: [
+      'Infrastructure Projects',
+      'Commercial Construction',
+      'Industrial Facilities',
+      'Water Treatment Plants'
     ]
   }
 ];

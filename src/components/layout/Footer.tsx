@@ -44,8 +44,13 @@ export function Footer() {
               Leading high-performance construction chemicals manufacturer, delivering engineered solutions for modern infrastructure.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
+              {[
+                { Icon: Facebook, url: 'https://facebook.com/civiltech' },
+                { Icon: Twitter, url: 'https://twitter.com/civiltech' },
+                { Icon: Linkedin, url: 'https://linkedin.com/company/civiltech' },
+                { Icon: Instagram, url: 'https://instagram.com/civiltech' }
+              ].map(({ Icon, url }, i) => (
+                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
                   <Icon className="w-5 h-5" />
                 </a>
               ))}

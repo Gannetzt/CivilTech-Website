@@ -43,7 +43,7 @@ export function Header() {
       navigate('/products');
       setIsMenuOpen(false);
       setActiveDropdown(null);
-    } else if (item === 'Lok fix') {
+    } else if (item === 'Lokfix' || item === 'Lok fix') {
       navigate('/lokfix');
       setIsMenuOpen(false);
       setActiveDropdown(null);
@@ -97,6 +97,11 @@ export function Header() {
       items: ['Lok fix', 'Tools']
     },
     { label: 'Projects' },
+    {
+      label: 'Expertise',
+      hasDropdown: true,
+      items: ['Case Studies', 'Expert Hub']
+    },
     { label: 'About Us' },
     { label: 'Contact' }
   ];

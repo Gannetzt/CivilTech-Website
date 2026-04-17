@@ -27,10 +27,15 @@ const categories: ResourceCategory[] = [
 const mockDocuments = {
   datasheets: [
     { id: '1', name: 'Civil Tech Full Catalogue', size: '7.2 MB', version: '2025', date: 'Apr 2026', path: '/assets/Brochures/Civil Tech Catalogue.pdf' },
-    { id: '2', name: 'Galaxy MEP TDS', size: '3.4 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/BROCHURE POLY BOND 2k TDS_1.pdf' },
-    { id: '3', name: 'Galaxy Flexi Tape', size: '2.8 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
-    { id: '4', name: 'Civiltech Report', size: '80 KB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
-    { id: '5', name: 'TECHNICAL DATA SHEET', size: '1.7 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Document 8.pdf' },
+    { id: '2', name: 'All Products Documents', size: '11.2 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/All Products documents.pdf' },
+    { id: '3', name: 'Civiltech Report (Dec 2025)', size: '80 KB', version: '1.0', date: 'Dec 2025', path: '/assets/Brochures/1828-12-2025 CIVILTECH Report.pdf' },
+    { id: '4', name: 'PolyBond 2K TDS', size: '4.4 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Poly-Bond 2K Document.pdf' },
+    { id: '5', name: 'PolyBond Flexicoat TDS', size: '3.7 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Polybond Flexicoat.pdf' },
+    { id: '6', name: 'PolyBond SBR TDS', size: '2.3 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/POlybond SBR.pdf' },
+    { id: '7', name: 'Galaxy MEP TDS', size: '3.4 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Galaxy MEP.pdf' },
+    { id: '8', name: 'Galaxy Flexi Tape TDS', size: '2.8 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Galaxy Flexi Tape Document.pdf' },
+    { id: '9', name: 'Trujoint Flexitape TDS', size: '2.8 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Trujoint Flexitape TDS.pdf' },
+    { id: '10', name: 'Rockfix GP TDS', size: '1.7 MB', version: '1.0', date: 'Apr 2026', path: '/assets/Brochures/Rockfix GP.pdf' },
   ],
   guides: [
     { id: '1', name: 'Surface Preparation Guide', size: '4.2 MB', version: 'v5.0', date: 'Jan 2026', path: '#' },

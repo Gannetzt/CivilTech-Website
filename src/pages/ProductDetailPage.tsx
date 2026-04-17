@@ -57,17 +57,22 @@ export function ProductDetailPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 mb-4">
-              <button className="bg-white text-primary hover:bg-green-600 hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl flex items-center gap-3 group">
+              <button 
+                onClick={() => navigate('/contact', { state: { product: product.name } })}
+                className="bg-white text-primary hover:bg-green-600 hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl flex items-center gap-3 group"
+              >
                 <span>Request Quote</span>
                 <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </button>
-              <button
-                onClick={() => product.tdsUrl && window.open(product.tdsUrl, '_blank')}
-                className="bg-primary/20 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3"
-              >
-                <Download className="w-4 h-4" />
-                <span>Technical Data</span>
-              </button>
+              {product.tdsUrl && (
+                <button
+                  onClick={() => window.open(product.tdsUrl, '_blank')}
+                  className="bg-primary/20 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Technical Data</span>
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router';
 import { MapPin, Phone, Mail, Send, Search, ArrowRight, Building2, Map } from 'lucide-react';
 
 const states = [
@@ -29,9 +30,21 @@ export function ContactUs() {
     message: ''
   });
 
+  const location = useLocation();
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const state = location.state as { product?: string } | null;
+    if (state?.product) {
+      setFormData(prev => ({
+        ...prev,
+        subject: `Quote Request: ${state.product}`,
+        message: `I would like to request a quote and technical details for the product: ${state.product}.`
+      }));
+    }
+  }, [location.state]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
