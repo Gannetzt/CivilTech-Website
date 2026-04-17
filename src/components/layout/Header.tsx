@@ -90,18 +90,13 @@ export function Header() {
       hasDropdown: true,
       items: ['Solutions', 'Sectors']
     },
-    { label: 'Products' },
     {
       label: 'Featured',
       hasDropdown: true,
       items: ['Lok fix', 'Tools']
     },
+    { label: 'Products' },
     { label: 'Projects' },
-    {
-      label: 'Expertise',
-      hasDropdown: true,
-      items: ['Case Studies', 'Expert Hub']
-    },
     { label: 'About Us' },
     { label: 'Contact' }
   ];
