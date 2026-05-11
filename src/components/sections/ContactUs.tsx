@@ -224,7 +224,7 @@ export function ContactUs() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600 group-hover:text-blue-700 transition-colors">mailtociviltech@gmail.com</p>
+                      <p className="text-gray-600 group-hover:text-blue-700 transition-colors">nishanth@civiltechconchem.com</p>
                     </div>
                   </div>
                 </div>

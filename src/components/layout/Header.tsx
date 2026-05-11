@@ -127,7 +127,7 @@ export function Header() {
               </div>
               <div className="flex items-center gap-1.5 group cursor-default">
                 <span className="text-gray-300">Email:</span>
-                <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">mailtociviltech@gmail.com</span>
+                <span className="text-blue-900/60 dark:text-blue-400/60 group-hover:text-blue-900 dark:group-hover:text-blue-300 transition-colors">nishanth@civiltechconchem.com</span>
               </div>
             </div>
           </div>

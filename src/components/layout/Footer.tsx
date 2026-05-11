@@ -146,7 +146,7 @@ export function Footer() {
             </div>
             <div>
               <p className="text-[10px] uppercase tracking-widest text-blue-100/40 font-bold mb-0.5">Email Support</p>
-              <p className="text-sm font-bold">mailtociviltech@gmail.com</p>
+              <p className="text-sm font-bold">nishanth@civiltechconchem.com</p>
             </div>
           </div>
         </div>
